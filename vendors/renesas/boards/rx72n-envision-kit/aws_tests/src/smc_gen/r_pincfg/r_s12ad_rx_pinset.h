@@ -19,10 +19,10 @@
 /***********************************************************************************************************************
 * File Name    : r_s12ad_rx_pinset.h
 * Version      : 1.0.2
-* Device(s)    : R5F565NEDxFC
+* Device(s)    : R5F572NNHxFB
 * Tool-Chain   : RXC toolchain
 * Description  : Setting of port and mpc registers
-* Creation Date: 2020-04-09
+* Creation Date: 2020-07-21
 ***********************************************************************************************************************/
 
 #ifndef R_S12AD_RX_H

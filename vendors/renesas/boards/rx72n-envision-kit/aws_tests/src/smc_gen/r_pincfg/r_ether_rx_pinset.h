@@ -19,10 +19,10 @@
 /***********************************************************************************************************************
 * File Name    : r_ether_rx_pinset.h
 * Version      : 1.0.2
-* Device(s)    : R5F565NEDxFC
+* Device(s)    : R5F572NNHxFB
 * Tool-Chain   : RXC toolchain
 * Description  : Setting of port and mpc registers
-* Creation Date: 2020-04-10
+* Creation Date: 2020-07-21
 ***********************************************************************************************************************/
 
 #ifndef R_ETHER_RX_H

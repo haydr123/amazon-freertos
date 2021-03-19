@@ -19,10 +19,10 @@
 /***********************************************************************************************************************
 * File Name    : r_s12ad_rx_pinset.c
 * Version      : 1.0.2
-* Device(s)    : R5F565NEDxFC
+* Device(s)    : R5F572NNHxFB
 * Tool-Chain   : RXC toolchain
 * Description  : Setting of port and mpc registers
-* Creation Date: 2020-04-09
+* Creation Date: 2020-07-21
 ***********************************************************************************************************************/
 
 /***********************************************************************************************************************
@@ -52,8 +52,8 @@ void R_ADC_PinSet_S12AD0()
     MPC.P40PFS.BYTE = 0x80U;
 
     /* Set ADTRG0# pin */
-    MPC.P07PFS.BYTE = 0x09U;
-    PORT0.PMR.BIT.B7 = 1U;
+    MPC.P25PFS.BYTE = 0x09U;
+    PORT2.PMR.BIT.B5 = 1U;
 
     R_BSP_RegisterProtectEnable(BSP_REG_PROTECT_MPC);
 }

@@ -54,14 +54,14 @@
  Please set the value 1 ETHER_CFG_CH0_PHY_ADDRESS and value 2 ETHER_CFG_CH1_PHY_ADDRESS when use default setting of the RSK+RX72M.
  Please set the value 1 ETHER_CFG_CH1_PHY_ADDRESS when use default setting of the RSK+RX72N.
  */
-    #define ETHER_CFG_CH0_PHY_ADDRESS                   (30)     /* Please define the PHY-LSI address in the range of 0-31. */
+    #define ETHER_CFG_CH0_PHY_ADDRESS                   (0)     /* Please define the PHY-LSI address in the range of 0-31. */
     #define ETHER_CFG_CH1_PHY_ADDRESS                   (1)     /* Please define the PHY-LSI address in the range of 0-31. */
 
 /* The number of Rx descriptors. */
-    #define ETHER_CFG_EMAC_RX_DESCRIPTORS               (6)
+    #define ETHER_CFG_EMAC_RX_DESCRIPTORS               (4)
 
 /* The number of Tx descriptors. */
-    #define ETHER_CFG_EMAC_TX_DESCRIPTORS               (3)
+    #define ETHER_CFG_EMAC_TX_DESCRIPTORS               (4)
 
 /* Please define the size of the sending and receiving buffer in the value where one frame can surely be stored 
  because the driver is single-frame/single-buffer processing.  */
@@ -102,7 +102,7 @@
  0 = unused  (use PHY-LSI status register)
  1 = use     (use LINKSTA signal)
  */
-    #define ETHER_CFG_USE_LINKSTA                       (1)     /* This setting is reflected in all channels */
+    #define ETHER_CFG_USE_LINKSTA                       (0)     /* This setting is reflected in all channels */
 
 /* Definition of whether or not to use KSZ8041NL of the Micrel Inc.
  0 = unused

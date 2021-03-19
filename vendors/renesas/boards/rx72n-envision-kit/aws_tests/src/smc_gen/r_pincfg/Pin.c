@@ -20,9 +20,9 @@
 /***********************************************************************************************************************
 * File Name    : Pin.c
 * Version      : 1.0.2
-* Device(s)    : R5F565NEDxFC
+* Device(s)    : R5F572NNHxFB
 * Description  : This file implements SMC pin code generation.
-* Creation Date: 2020-04-10
+* Creation Date: 2020-07-21
 ***********************************************************************************************************************/
 
 /***********************************************************************************************************************
@@ -36,7 +36,6 @@ Includes
 ***********************************************************************************************************************/
 #include "r_cg_macrodriver.h"
 /* Start user code for include. Do not edit comment generated here */
-#include "Pin.h"
 /* End user code. Do not edit comment generated here */
 #include "r_cg_userdefine.h"
 
@@ -56,6 +55,19 @@ Global variables and functions
 void R_Pins_Create(void)
 {
     R_BSP_RegisterProtectDisable(BSP_REG_PROTECT_MPC);
+
+    /* Set ADTRG0# pin */
+    MPC.P25PFS.BYTE = 0x09U;
+    PORT2.PMR.BYTE |= 0x20U;
+
+    /* Set AN000 pin */
+    MPC.P40PFS.BYTE = 0x80U;
+    PORT4.PMR.BYTE &= 0xFEU;
+    PORT4.PDR.BYTE &= 0xFEU;
+
+    /* Set CLKOUT25M pin */
+    MPC.P56PFS.BYTE = 0x2AU;
+    PORT5.PMR.BYTE |= 0x40U;
 
     /* Set ET0_COL pin */
     MPC.PC7PFS.BYTE = 0x11U;
@@ -97,10 +109,6 @@ void R_Pins_Create(void)
     MPC.PC6PFS.BYTE = 0x11U;
     PORTC.PMR.BYTE |= 0x40U;
 
-    /* Set ET0_LINKSTA pin */
-    MPC.P34PFS.BYTE = 0x11U;
-    PORT3.PMR.BYTE |= 0x10U;
-
     /* Set ET0_MDC pin */
     MPC.P72PFS.BYTE = 0x11U;
     PORT7.PMR.BYTE |= 0x04U;
@@ -133,15 +141,15 @@ void R_Pins_Create(void)
     MPC.PC3PFS.BYTE = 0x11U;
     PORTC.PMR.BYTE |= 0x08U;
 
-    /* Set RXD8 pin */
-    MPC.PJ1PFS.BYTE = 0x0AU;
-    PORTJ.PMR.BYTE |= 0x02U;
+    /* Set RXD2 pin */
+    MPC.P12PFS.BYTE = 0x0AU;
+    PORT1.PMR.BYTE |= 0x04U;
 
-    /* Set TXD8 pin */
-    PORTJ.PODR.BYTE |= 0x04U;
-    MPC.PJ2PFS.BYTE = 0x0AU;
-    PORTJ.PDR.BYTE |= 0x04U;
-    // PORTJ.PMR.BIT.B2 = 1U; // Please set the PMR bit after TE bit is set to 1.
+    /* Set TXD2 pin */
+    PORT1.PODR.BYTE |= 0x08U;
+    MPC.P13PFS.BYTE = 0x0AU;
+    PORT1.PDR.BYTE |= 0x08U;
+    // PORT1.PMR.BIT.B3 = 1U; // Please set the PMR bit after TE bit is set to 1.
 
     R_BSP_RegisterProtectEnable(BSP_REG_PROTECT_MPC);
 }   
