@@ -19,10 +19,10 @@
 /***********************************************************************************************************************
 * File Name    : r_ether_rx_pinset.c
 * Version      : 1.0.2
-* Device(s)    : R5F565NEDxFC
+* Device(s)    : R5F572NNHxFB
 * Tool-Chain   : RXC toolchain
 * Description  : Setting of port and mpc registers
-* Creation Date: 2020-04-10
+* Creation Date: 2020-07-21
 ***********************************************************************************************************************/
 
 /***********************************************************************************************************************
@@ -44,6 +44,10 @@ Global variables and functions
 void R_ETHER_PinSet_ETHERC0_MII()
 {
     R_BSP_RegisterProtectDisable(BSP_REG_PROTECT_MPC);
+
+    /* Set CLKOUT25M pin */
+    MPC.P56PFS.BYTE = 0x2AU;
+    PORT5.PMR.BIT.B6 = 1U;
 
     /* Set ET0_TX_CLK pin */
     MPC.PC4PFS.BYTE = 0x11U;
@@ -116,10 +120,6 @@ void R_ETHER_PinSet_ETHERC0_MII()
     /* Set ET0_MDIO pin */
     MPC.P71PFS.BYTE = 0x11U;
     PORT7.PMR.BIT.B1 = 1U;
-
-    /* Set ET0_LINKSTA pin */
-    MPC.P34PFS.BYTE = 0x11U;
-    PORT3.PMR.BIT.B4 = 1U;
 
     R_BSP_RegisterProtectEnable(BSP_REG_PROTECT_MPC);
 }
