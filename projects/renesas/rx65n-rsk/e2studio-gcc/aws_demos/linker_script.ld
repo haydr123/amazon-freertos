@@ -108,13 +108,14 @@ SECTIONS
 		_RPFRAM_end = (. + 3) & ~ 3;
 		_PFRAM_end = LOADADDR(.data) + (_RPFRAM_end - ADDR(.data));
 		_edata = .;
-	} >RAM B_ETHERNET_BUFFERS_1 (NOLOAD) :
+	} >RAM
+	
+	B_ETHERNET_BUFFERS_1  (NOLOAD) :
 {
 	_B_ETHERNET_BUFFERS_1_start = .;
 	*(B_ETHERNET_BUFFERS_1)
 	_B_ETHERNET_BUFFERS_1_end = .;
-} >RAM
-
+	} >RAM2
 	B_RX_DESC_1 (NOLOAD) :
 	{
 	_B_RX_DESC_1_start = .;

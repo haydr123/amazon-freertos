@@ -14,11 +14,17 @@
 			<triggers>full,incremental,</triggers>
 			<arguments/>
 		</buildCommand>
+        <buildCommand>
+            <name>org.eclipse.xtext.ui.shared.xtextBuilder</name>
+            <arguments>
+            </arguments>
+        </buildCommand>
 	</buildSpec>
 	<natures>
 		<nature>org.eclipse.cdt.core.cnature</nature>
 		<nature>org.eclipse.cdt.managedbuilder.core.managedBuildNature</nature>
 		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
+        <nature>org.eclipse.xtext.ui.shared.xtextNature</nature>
 	</natures>
 	<linkedResources>
 		<link>
@@ -171,21 +177,26 @@
 			<type>1</type>
 			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/amazon_freertos_common/serial_term_uart.h</locationURI>
 		</link>
-		<link>
-			<name>vendors/renesas/amazon_freertos_common/compiler_support/ccrx/exit.c</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/amazon_freertos_common/compiler_support/ccrx/exit.c</locationURI>
-		</link>
-		<link>
-			<name>vendors/renesas/amazon_freertos_common/compiler_support/ccrx/implicitlyinclude.h</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/amazon_freertos_common/compiler_support/ccrx/implicitlyinclude.h</locationURI>
-		</link>
-		<link>
-			<name>vendors/renesas/amazon_freertos_common/compiler_support/ccrx/time.h</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/amazon_freertos_common/compiler_support/ccrx/time.h</locationURI>
-		</link>
+        <link>
+            <name>vendors/renesas/amazon_freertos_common/compiler_support/gnuc/implicitlyinclude.h</name>
+            <type>1</type>
+            <locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/amazon_freertos_common/compiler_support/gnuc/implicitlyinclude.h</locationURI>
+        </link>
+        <link>
+            <name>vendors/renesas/amazon_freertos_common/compiler_support/gnuc/assert.c</name>
+            <type>1</type>
+            <locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/amazon_freertos_common/compiler_support/gnuc/assert.c</locationURI>
+        </link>
+        <link>
+            <name>vendors/renesas/amazon_freertos_common/compiler_support/gnuc/fprintf.c</name>
+            <type>1</type>
+            <locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/amazon_freertos_common/compiler_support/gnuc/fprintf.c</locationURI>
+        </link>
+        <link>
+            <name>vendors/renesas/rx_driver_package/v125/r_bsp/mcu/all/linker_script_rvectors.inc</name>
+            <type>1</type>
+            <locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v125/r_bsp/mcu/all/linker_script_rvectors.inc</locationURI>
+        </link>
 		<link>
 			<name>vendors/renesas/amazon_freertos_common/network_support/onchip_rx_ether/freertos_ip_hook.c</name>
 			<type>1</type>
@@ -922,149 +933,154 @@
 			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v125/r_sci_rx/src/targets/rx65n/r_sci_rx65n_private.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/general/r_cg_hardware_setup.c</name>
+			<name>vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/general/r_cg_hardware_setup.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/general/r_cg_hardware_setup.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/general/r_cg_hardware_setup.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/general/r_smc_cgc.c</name>
+			<name>vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/general/r_smc_cgc.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/general/r_smc_cgc.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/general/r_smc_cgc.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/general/r_smc_cgc_user.c</name>
+			<name>vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/general/r_smc_cgc_user.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/general/r_smc_cgc_user.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/general/r_smc_cgc_user.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/general/r_smc_interrupt.c</name>
+			<name>vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/general/r_smc_interrupt.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/general/r_smc_interrupt.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/general/r_smc_interrupt.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_pincfg/Pin.c</name>
+			<name>vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/r_pincfg/Pin.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_pincfg/Pin.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/r_pincfg/Pin.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_pincfg/r_ether_rx_pinset.c</name>
+			<name>vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/r_pincfg/r_ether_rx_pinset.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_pincfg/r_ether_rx_pinset.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/r_pincfg/r_ether_rx_pinset.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_pincfg/r_s12ad_rx_pinset.c</name>
+			<name>vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/r_pincfg/r_s12ad_rx_pinset.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_pincfg/r_s12ad_rx_pinset.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/r_pincfg/r_s12ad_rx_pinset.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_pincfg/r_sci_rx_pinset.c</name>
+			<name>vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/r_pincfg/r_sci_rx_pinset.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_pincfg/r_sci_rx_pinset.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/r_pincfg/r_sci_rx_pinset.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/general/r_cg_macrodriver.h</name>
+			<name>vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/general/r_cg_macrodriver.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/general/r_cg_macrodriver.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/general/r_cg_macrodriver.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/general/r_cg_userdefine.h</name>
+			<name>vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/general/r_cg_userdefine.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/general/r_cg_userdefine.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/general/r_cg_userdefine.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/general/r_smc_cgc.h</name>
+			<name>vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/general/r_smc_cgc.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/general/r_smc_cgc.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/general/r_smc_cgc.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/general/r_smc_entry.h</name>
+			<name>vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/general/r_smc_entry.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/general/r_smc_entry.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/general/r_smc_entry.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/general/r_smc_interrupt.h</name>
+			<name>vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/general/r_smc_interrupt.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/general/r_smc_interrupt.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/general/r_smc_interrupt.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_config/r_bsp_config.h</name>
+			<name>vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/r_config/r_bsp_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_config/r_bsp_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/r_config/r_bsp_config.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_config/r_bsp_interrupt_config.h</name>
+			<name>vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/r_config/r_bsp_interrupt_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_config/r_bsp_interrupt_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/r_config/r_bsp_interrupt_config.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_config/r_byteq_config.h</name>
+			<name>vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/r_config/r_byteq_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_config/r_byteq_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/r_config/r_byteq_config.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_config/r_ether_rx_config.h</name>
+			<name>vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/r_config/r_ether_rx_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_config/r_ether_rx_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/r_config/r_ether_rx_config.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_config/r_flash_rx_config.h</name>
+			<name>vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/r_config/r_flash_rx_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_config/r_flash_rx_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/r_config/r_flash_rx_config.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_config/r_s12ad_rx_config.h</name>
+			<name>vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/r_config/r_s12ad_rx_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_config/r_s12ad_rx_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/r_config/r_s12ad_rx_config.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_config/r_sci_rx_config.h</name>
+			<name>vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/r_config/r_sci_rx_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_config/r_sci_rx_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/r_config/r_sci_rx_config.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_pincfg/Pin.h</name>
+			<name>vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/r_pincfg/Pin.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_pincfg/Pin.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/r_pincfg/Pin.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_pincfg/r_ether_rx_pinset.h</name>
+			<name>vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/r_pincfg/r_ether_rx_pinset.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_pincfg/r_ether_rx_pinset.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/r_pincfg/r_ether_rx_pinset.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_pincfg/r_pinset.h</name>
+			<name>vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/r_pincfg/r_pinset.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_pincfg/r_pinset.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/r_pincfg/r_pinset.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_pincfg/r_s12ad_rx_pinset.h</name>
+			<name>vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/r_pincfg/r_s12ad_rx_pinset.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_pincfg/r_s12ad_rx_pinset.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/r_pincfg/r_s12ad_rx_pinset.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_pincfg/r_sci_rx_pinset.h</name>
+			<name>vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/r_pincfg/r_sci_rx_pinset.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen/r_pincfg/r_sci_rx_pinset.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen/r_pincfg/r_sci_rx_pinset.h</locationURI>
 		</link>
 		<link>
 			<name>freertos_kernel/portable/MemMang/heap_4.c</name>
 			<type>1</type>
 			<locationURI>AWS_IOT_MCU_ROOT/freertos_kernel/portable/MemMang/heap_4.c</locationURI>
 		</link>
+         <link>
+            <name>libraries/freertos_plus/standard/freertos_plus_tcp/standard/freertos_plus_tcp/portable/Compiler/GCC/pack_struct_end.h</name>
+            <type>1</type>
+            <locationURI>AFR_HOME/libraries/freertos_plus/standard/freertos_plus_tcp/standard/freertos_plus_tcp/portable/Compiler/GCC/pack_struct_end.h</locationURI>
+        </link>
+        <link>
+            <name>libraries/freertos_plus/standard/freertos_plus_tcp/standard/freertos_plus_tcp/portable/Compiler/GCC/pack_struct_start.h</name>
+            <type>1</type>
+            <locationURI>AFR_HOME/libraries/freertos_plus/standard/freertos_plus_tcp/standard/freertos_plus_tcp/portable/Compiler/GCC/pack_struct_start.h</locationURI>
+        </link>
 		<link>
-			<name>freertos_kernel/portable/Renesas/RX600v2/port_asm.src</name>
+			<name>freertos_kernel/portable/GCC/RX600v2/port.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/freertos_kernel/portable/Renesas/RX600v2/port_asm.src</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/freertos_kernel/portable/GCC/RX600v2/port.c</locationURI>
 		</link>
 		<link>
-			<name>freertos_kernel/portable/Renesas/RX600v2/port.c</name>
+			<name>freertos_kernel/portable/GCC/RX600v2/portmacro.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/freertos_kernel/portable/Renesas/RX600v2/port.c</locationURI>
-		</link>
-		<link>
-			<name>freertos_kernel/portable/Renesas/RX600v2/portmacro.h</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/freertos_kernel/portable/Renesas/RX600v2/portmacro.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/freertos_kernel/portable/GCC/RX600v2/portmacro.h</locationURI>
 		</link>
 		<link>
 			<name>demos/demo_runner/aws_demo_network_addr.c</name>
@@ -1462,9 +1478,9 @@
 			<locationURI>AWS_IOT_MCU_ROOT/libraries/abstractions/pkcs11/corePKCS11/source/core_pkcs11.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-rsk/ports/pkcs11/core_pkcs11_pal.c</name>
+			<name>vendors/renesas/boards/rx65n-rsk-gcc/ports/pkcs11/core_pkcs11_pal.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/ports/pkcs11/core_pkcs11_pal.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk-gcc/ports/pkcs11/core_pkcs11_pal.c</locationURI>
 		</link>
 		<link>
 			<name>libraries/abstractions/pkcs11/corePKCS11/source/portable/mbedtls/core_pkcs11_mbedtls.c</name>
@@ -1897,9 +1913,9 @@
 			<locationURI>AWS_IOT_MCU_ROOT/libraries/3rdparty/mbedtls/library/base64.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-rsk/ports/ota/aws_ota_pal.c</name>
+			<name>vendors/renesas/boards/rx65n-rsk-gcc/ports/ota/aws_ota_pal.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/ports/ota/aws_ota_pal.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk-gcc/ports/ota/aws_ota_pal.c</locationURI>
 		</link>
 		<link>
 			<name>libraries/freertos_plus/aws/ota/src/mqtt/aws_iot_ota_cbor_internal.h</name>
@@ -2119,152 +2135,152 @@
 		<link>
 			<name>config_files/FreeRTOSConfig.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_demos/config_files/FreeRTOSConfig.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/config_files/FreeRTOSConfig.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/FreeRTOSIPConfig.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_demos/config_files/FreeRTOSIPConfig.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/config_files/FreeRTOSIPConfig.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/aws_bufferpool_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_demos/config_files/aws_bufferpool_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/config_files/aws_bufferpool_config.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/aws_demo_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_demos/config_files/aws_demo_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/config_files/aws_demo_config.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/aws_ggd_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_demos/config_files/aws_ggd_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/config_files/aws_ggd_config.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/aws_iot_network_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_demos/config_files/aws_iot_network_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/config_files/aws_iot_network_config.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/aws_mqtt_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_demos/config_files/aws_mqtt_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/config_files/aws_mqtt_config.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/aws_ota_agent_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_demos/config_files/aws_ota_agent_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/config_files/aws_ota_agent_config.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/aws_secure_sockets_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_demos/config_files/aws_secure_sockets_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/config_files/aws_secure_sockets_config.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/aws_shadow_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_demos/config_files/aws_shadow_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/config_files/aws_shadow_config.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/aws_wifi_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_demos/config_files/aws_wifi_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/config_files/aws_wifi_config.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/core_http_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_demos/config_files/core_http_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/config_files/core_http_config.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/core_mqtt_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_demos/config_files/core_mqtt_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/config_files/core_mqtt_config.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/core_pkcs11_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_demos/config_files/core_pkcs11_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/config_files/core_pkcs11_config.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/defender_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_demos/config_files/defender_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/config_files/defender_config.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/defender_demo_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_demos/config_files/defender_demo_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/config_files/defender_demo_config.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/http_demo_mutual_auth_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_demos/config_files/http_demo_mutual_auth_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/config_files/http_demo_mutual_auth_config.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/http_demo_s3_download_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_demos/config_files/http_demo_s3_download_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/config_files/http_demo_s3_download_config.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/http_demo_s3_download_multithreaded_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_demos/config_files/http_demo_s3_download_multithreaded_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/config_files/http_demo_s3_download_multithreaded_config.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/http_demo_s3_upload_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_demos/config_files/http_demo_s3_upload_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/config_files/http_demo_s3_upload_config.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/iot_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_demos/config_files/iot_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/config_files/iot_config.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/iot_mqtt_agent_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_demos/config_files/iot_mqtt_agent_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/config_files/iot_mqtt_agent_config.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/jobs_demo_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_demos/config_files/jobs_demo_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/config_files/jobs_demo_config.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/mbedtls_user_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_demos/config_files/mbedtls_user_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/config_files/mbedtls_user_config.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/mqtt_demo_connection_sharing_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_demos/config_files/mqtt_demo_connection_sharing_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/config_files/mqtt_demo_connection_sharing_config.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/mqtt_demo_mutual_auth_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_demos/config_files/mqtt_demo_mutual_auth_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/config_files/mqtt_demo_mutual_auth_config.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/mqtt_demo_plaintext_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_demos/config_files/mqtt_demo_plaintext_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/config_files/mqtt_demo_plaintext_config.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/shadow_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_demos/config_files/shadow_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/config_files/shadow_config.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/shadow_demo_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_demos/config_files/shadow_demo_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/config_files/shadow_demo_config.h</locationURI>
 		</link>
 		<link>
 			<name>application_code/main.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_demos/application_code/main.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/application_code/main.c</locationURI>
 		</link>
 		<link>
 			<name>libraries/3rdparty/mbedtls/library/aes.c</name>
@@ -3125,7 +3141,7 @@
 	<filteredResources>
 		<filter>
 			<id>1580973123184</id>
-			<name>vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen</name>
+			<name>vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen</name>
 			<type>10</type>
 			<matcher>
 				<id>org.eclipse.ui.ide.multiFilter</id>
@@ -3140,11 +3156,11 @@
 		</variable>
 		<variable>
 			<name>SMC_GENERATED_LOC</name>
-			<value>$%7BAFR_HOME%7D/vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen</value>
+			<value>$%7BAFR_HOME%7D/vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen</value>
 		</variable>
 		<variable>
 			<name>SMC_LINKED_LOC</name>
-			<value>$%7BPROJECT_LOC%7D/vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen</value>
+			<value>$%7BPROJECT_LOC%7D/vendors/renesas/boards/rx65n-rsk-gcc/aws_demos/src/smc_gen</value>
 		</variable>
 	</variableList>
 </projectDescription>

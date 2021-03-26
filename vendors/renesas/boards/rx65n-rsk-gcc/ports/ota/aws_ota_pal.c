@@ -535,7 +535,7 @@ static OTA_Err_t prvPAL_CheckFileSignature( OTA_FileContext_t * const C )
 			flash_err = R_FLASH_Write((uint32_t)assembled_flash_buffer, (uint32_t)flash_aligned_address, FLASH_CF_MIN_PGM_SIZE);
 			if(flash_err != FLASH_SUCCESS)
 			{
-				nop();
+				R_BSP_NOP();
 			}
 			while (OTA_FLASHING_IN_PROGRESS == gs_header_flashing_task);
 			xSemaphoreGive(xSemaphoreFlashig);
@@ -1004,7 +1004,7 @@ static int32_t ota_context_update_user_firmware_header( OTA_FileContext_t * C )
 		flash_err = R_FLASH_Write((uint32_t)block, (uint32_t)BOOT_LOADER_UPDATE_TEMPORARY_AREA_LOW_ADDRESS, length);
 		if(flash_err != FLASH_SUCCESS)
 		{
-			nop();
+			R_BSP_NOP();
 		}
 		while (OTA_FLASHING_IN_PROGRESS == gs_header_flashing_task);
 	}
@@ -1272,7 +1272,7 @@ static void ota_flashing_callback(void *event)
 
     if((event_code != FLASH_INT_EVENT_WRITE_COMPLETE) || (event_code == FLASH_INT_EVENT_ERASE_COMPLETE))
     {
-    	nop(); /* trap */
+    	R_BSP_NOP(); /* trap */
     }
 	static portBASE_TYPE xHigherPriorityTaskWoken;
 	xSemaphoreGiveFromISR(xSemaphoreFlashig, &xHigherPriorityTaskWoken);

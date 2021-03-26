@@ -111,9 +111,6 @@ static void prvMiscInitialization( void );
  */
 void main( void )
 {
-	R_BSP_NOP();
-    /* Perform any hardware initialization that does not require the RTOS to be
-     * running.  */
 
     while(1)
     {
