@@ -1611,6 +1611,16 @@
 			<type>1</type>
 			<locationURI>AWS_IOT_MCU_ROOT/libraries/c_sdk/aws/shadow/include/aws_shadow.h</locationURI>
 		</link>
+        <link>
+			<name>libraries/c_sdk/standard/https/src/iot_https_client.c</name>
+			<type>1</type>
+			<locationURI>AWS_IOT_MCU_ROOT/libraries/c_sdk/standard/https/src/iot_https_client.c</locationURI>
+		</link>
+		<link>
+			<name>libraries/c_sdk/standard/https/src/iot_https_utils.c</name>
+			<type>1</type>
+			<locationURI>AWS_IOT_MCU_ROOT/libraries/c_sdk/standard/https/src/iot_https_utils.c</locationURI>
+		</link>
 		<link>
 			<name>libraries/coreHTTP/source/core_http_client.c</name>
 			<type>1</type>
@@ -2005,21 +2015,6 @@
 			<name>application_code/main.c</name>
 			<type>1</type>
 			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/application_code/main.c</locationURI>
-		</link>
-        <link>
-			<name>application_code/renesas_code/main_task.c</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/application_code/renesas_code/main_task.c</locationURI>
-		</link>
-        <link>
-			<name>application_code/renesas_code/utility/r_simple_filesystem_on_dataflash.c</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/application_code/renesas_code/utility/r_simple_filesystem_on_dataflash.c</locationURI>
-		</link>
-		<link>
-			<name>application_code/renesas_code/utility/r_simple_filesystem_on_dataflash_if.h</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/application_code/renesas_code/utility/r_simple_filesystem_on_dataflash_if.h</locationURI>
 		</link>
 		<link>
 			<name>libraries/3rdparty/mbedtls/library/aes.c</name>
