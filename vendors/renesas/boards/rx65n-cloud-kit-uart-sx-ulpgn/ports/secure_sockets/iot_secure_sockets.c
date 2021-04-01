@@ -238,8 +238,7 @@ Socket_t SOCKETS_Accept( Socket_t xSocket,
  */
 int32_t SOCKETS_Connect( Socket_t xSocket,
                          SocketsSockaddr_t * pxAddress,
-                         Socklen_t xAddressLength,
-						 char * pcDestination)
+                         Socklen_t xAddressLength)
 {
     int32_t lStatus = SOCKETS_ERROR_NONE;
     wifi_err_t ret;
@@ -449,7 +448,7 @@ int32_t SOCKETS_Close( Socket_t xSocket )
         {
             TLS_Cleanup( pxContext->pvTLSContext );
         }
-		R_WIFI_SX_ULPGN_Close(pxContext->socket_no);
+		R_WIFI_SX_ULPGN_CloseSocket(pxContext->socket_no);
 		vPortFree( pxContext );
 		xSemaphoreGive(xUcInUse);
     }
