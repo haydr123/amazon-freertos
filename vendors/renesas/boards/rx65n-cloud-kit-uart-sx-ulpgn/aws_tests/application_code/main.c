@@ -1,6 +1,6 @@
 /*
-Amazon FreeRTOS
-Copyright (C) 2018 Amazon.com, Inc. or its affiliates.  All Rights Reserved.
+FreeRTOS
+Copyright (C) 2020 Amazon.com, Inc. or its affiliates.  All Rights Reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
@@ -26,29 +26,23 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 /* FreeRTOS includes. */
 #include "FreeRTOS.h"
 #include "task.h"
+// RX65N Cloud Kit 20200923#include "FreeRTOS_IP.h"
 #include <stdio.h>
+#include <string.h>
 #include <stdbool.h>	// RX65N Cloud Kit 20200923
 
-/* Version includes. */
-#include "aws_application_version.h"
+/* Renesas. */
+#include "serial_term_uart.h"
 
-/* System init includes. */
+/* Test application include. */
+#include "aws_test_runner.h"
+
+/* Aws Library Includes includes. */
 #include "iot_system_init.h"
-
-/* Logging includes. */
 #include "iot_logging_task.h"
-
-/* Key provisioning includes. */
-#include "aws_dev_mode_key_provisioning.h"
-
-/* FreeRTOS+TCP includes. */
-//#include "FreeRTOS_IP.h"
-
-/* Demo includes */
-#include "platform.h"
-#include "aws_demo.h"
 #include "aws_clientcredential.h"
-#include "aws_clientcredential_keys.h"
+#include "aws_application_version.h"
+#include "aws_dev_mode_key_provisioning.h"
 #include "iot_wifi.h"	// RX65N Cloud Kit 20200923
 
 #define mainLOGGING_TASK_STACK_SIZE         ( configMINIMAL_STACK_SIZE * 6 )
@@ -66,10 +60,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #define _NM_WIFI_CONNECTION_RETRIES              ( 5 )
 // RX65N Cloud Kit 20200923 <<--
-
-#define mainLOGGING_TASK_STACK_SIZE         ( configMINIMAL_STACK_SIZE * 6 )
-#define mainLOGGING_MESSAGE_QUEUE_LENGTH    ( 15 )
-#define mainTEST_RUNNER_TASK_STACK_SIZE    ( configMINIMAL_STACK_SIZE * 8 )
 
 /* The MAC address array is not declared const as the MAC address will
 normally be read from an EEPROM and not hard coded (in real deployed
@@ -96,26 +86,26 @@ static const uint8_t ucIPAddress[ 4 ] =
 };
 static const uint8_t ucNetMask[ 4 ] =
 {
-    configNET_MASK0,
-    configNET_MASK1,
-    configNET_MASK2,
-    configNET_MASK3
+	configNET_MASK0,
+	configNET_MASK1,
+	configNET_MASK2,
+	configNET_MASK3
 };
 static const uint8_t ucGatewayAddress[ 4 ] =
 {
-    configGATEWAY_ADDR0,
-    configGATEWAY_ADDR1,
-    configGATEWAY_ADDR2,
-    configGATEWAY_ADDR3
+	configGATEWAY_ADDR0,
+	configGATEWAY_ADDR1,
+	configGATEWAY_ADDR2,
+	configGATEWAY_ADDR3
 };
 
 /* The following is the address of an OpenDNS server. */
 static const uint8_t ucDNSServerAddress[ 4 ] =
 {
-    configDNS_SERVER_ADDR0,
-    configDNS_SERVER_ADDR1,
-    configDNS_SERVER_ADDR2,
-    configDNS_SERVER_ADDR3
+	configDNS_SERVER_ADDR0,
+	configDNS_SERVER_ADDR1,
+	configDNS_SERVER_ADDR2,
+	configDNS_SERVER_ADDR3
 };
 
 /**
@@ -128,7 +118,6 @@ void vApplicationDaemonTaskStartupHook( void );
  */
 static void prvMiscInitialization( void );
 static bool _wifiEnable( void );	// RX65N Cloud Kit 20200923
-extern void main_task(void);
 
 /*-----------------------------------------------------------*/
 
@@ -138,17 +127,21 @@ extern void main_task(void);
  */
 void main( void )
 {
+	nop();
+    /* Perform any hardware initialization that does not require the RTOS to be
+     * running.  */
+
     while(1)
     {
     	vTaskDelay(10000);
     }
 }
 /*-----------------------------------------------------------*/
-static void reboot();
+
 static void prvMiscInitialization( void )
 {
     /* Initialize UART for serial terminal. */
-    uart_config();
+	uart_config();
 
     /* Start logging task. */
     xLoggingTaskInitialize( mainLOGGING_TASK_STACK_SIZE,
@@ -160,11 +153,11 @@ static void prvMiscInitialization( void )
 void vApplicationDaemonTaskStartupHook( void )
 {
     prvMiscInitialization();
-    WIFIReturnCode_t Wifistatus;
+
     if( SYSTEM_Init() == pdPASS )
     {
 #if 0
-    	/* Initialise the RTOS's TCP/IP stack.  The tasks that use the network
+        /* Initialise the RTOS's TCP/IP stack.  The tasks that use the network
         are created in the vApplicationIPNetworkEventHook() hook function
         below.  The hook function is called when the network connects. */
         FreeRTOS_IPInit( ucIPAddress,
@@ -173,40 +166,30 @@ void vApplicationDaemonTaskStartupHook( void )
                          ucDNSServerAddress,
                          ucMACAddress );
 
-        /* We should wait for the network to be up before we run any demos. */
+        /* We should wait for the network to be up before we run any tests. */
         while( FreeRTOS_IsNetworkUp() == pdFALSE )
         {
             vTaskDelay(300);
         }
-		FreeRTOS_printf( ( "The network is up and running\n" ) );
+        FreeRTOS_printf( ( "The network is up and running\n" ) );
 #endif
-		Wifistatus = WIFI_On();	// RX65N Cloud Kit 20200923
-		if (Wifistatus == eWiFiSuccess){
 
-			configPRINTF( ( "WiFi module initialized.\r\n" ) );
-			WIFI_Off();
-//			_wifiEnable();
-//			WIFI_Off();
-		}
-		else
-		{
-			configPRINTF( ( "WiFi module failed to initialize.\r\n" ) );
-			_wifiEnable();
-			WIFI_Off();
-			reboot();
-		}
+        _wifiEnable();	// RX65N Cloud Kit 20200923
 
         /* Provision the device with AWS certificate and private key. */
         vDevModeKeyProvisioning();
 
-        vTaskDelay(1000);
-
-        WIFI_Off();
-
-        /* Run all demos. */
-        DEMO_RUNNER_RunDemos();
+        vTaskDelay(10000);	// todo: this is renesas issue.
+        /* Create the task to run tests. */
+        xTaskCreate( TEST_RUNNER_RunTests_task,
+                     "RunTests_task",
+                     mainTEST_RUNNER_TASK_STACK_SIZE,
+                     NULL,
+                     tskIDLE_PRIORITY,
+                     NULL );
     }
 }
+/*-----------------------------------------------------------*/
 
 // RX65N Cloud Kit 20200923 -->>
 static bool _wifiConnectAccessPoint( void )
@@ -318,26 +301,17 @@ static bool _wifiEnable( void )
     return ret;
 }
 // RX65N Cloud Kit 20200923 <<--
+/*-----------------------------------------------------------*/
 
-static void reboot() {
-    //WDT Control Register (WDTCR)
-    WDT.WDTCR.BIT.TOPS = 0;
-    WDT.WDTCR.BIT.CKS  = 1;
-    WDT.WDTCR.BIT.RPES = 3;
-    WDT.WDTCR.BIT.RPSS = 3;
-    //WDT Status Register
-    WDT.WDTSR.BIT.CNTVAL = 0;
-    WDT.WDTSR.BIT.REFEF  = 0;
-    WDT.WDTSR.BIT.UNDFF  = 0;
-    //WDT Reset Control Register
-    WDT.WDTRCR.BIT.RSTIRQS = 1;
-    //Non-Maskable Interrupt Enable Register (NMIER)
-    ICU.NMIER.BIT.WDTEN    = 0;
 
-    WDT.WDTRR = 0;
-    WDT.WDTRR = 0xff;
+#if ( ipconfigUSE_LLMNR != 0 ) || ( ipconfigUSE_NBNS != 0 ) || ( ipconfigDHCP_REGISTER_HOSTNAME == 1 )
 
-    while (1); // Wait for Watchdog to kick in
+const char * pcApplicationHostnameHook( void )
+{
+    /* Assign the name "FreeRTOS" to this network node.  This function will
+     * be called during the DHCP: the machine will be registered with an IP
+     * address plus this name. */
+    return clientcredentialIOT_THING_NAME;
 }
 
-/*-----------------------------------------------------------*/
+#endif

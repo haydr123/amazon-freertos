@@ -31,6 +31,9 @@
 #ifndef _AWS_MQTT_CONFIG_H_
 #define _AWS_MQTT_CONFIG_H_
 
+/* Unity includes. */
+#include "unity_internals.h"
+
 #include <stdint.h>
 
 /**
@@ -60,11 +63,11 @@
 
 
 extern void vAssertCalled( void );
-#define mqttconfigASSERT( x ) if( ( x ) == 0 ) vAssertCalled()
+#define mqttconfigASSERT( x )    if( ( x ) == 0 ) TEST_ABORT()
 
 /**
  * @brief Set this macro to 1 for enabling debug logs.
  */
-#define mqttconfigENABLE_DEBUG_LOGS    0
+#define mqttconfigENABLE_DEBUG_LOGS    1
 
 #endif /* _AWS_MQTT_CONFIG_H_ */

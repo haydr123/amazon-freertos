@@ -1,4 +1,5 @@
 /*
+ * Amazon FreeRTOS V1.1.4
  * Copyright (C) 2018 Amazon.com, Inc. or its affiliates.  All Rights Reserved.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy of
@@ -17,18 +18,26 @@
  * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
  * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ *
+ * http://aws.amazon.com/freertos
+ * http://www.FreeRTOS.org
  */
 
-/* This file contains configuration settings for the demos. */
+/**
+ * @file aws_test_wifi_config.h
+ * @brief Port-specific variables for Wi-Fi tests.
+ */
+#ifndef _AWS_TEST_WIFI_CONFIG_H_
+#define _AWS_TEST_WIFI_CONFIG_H_
 
-#ifndef IOT_CONFIG_H_
-#define IOT_CONFIG_H_
+/**
+ * @brief The task stack size used in all Wi-Fi multi-task tests.
+ */
+#define testwifiTASK_STACK_SIZE             ( configMINIMAL_STACK_SIZE * 4 )    /* FIX ME. */
 
-/* Platform thread stack size. */
-#define IOT_THREAD_DEFAULT_STACK_SIZE    ( 5 * configMINIMAL_STACK_SIZE )
+/**
+ * @brief The task priority used in all Wi-Fi mulit-task tests. 
+ */
+#define testwifiTASK_PRIORITY               ( tskIDLE_PRIORITY )                /* FIX ME. */
 
-
-/* Include the common configuration file for FreeRTOS. */
-#include "iot_config_common.h"
-
-#endif /* ifndef IOT_CONFIG_H_ */
+#endif /* _AWS_TEST_WIFI_CONFIG_H_ */

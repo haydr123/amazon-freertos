@@ -187,11 +187,6 @@
 			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/amazon_freertos_common/compiler_support/ccrx/time.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/amazon_freertos_common/network_support/onchip_rx_ether/freertos_ip_hook.c</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/amazon_freertos_common/network_support/onchip_rx_ether/freertos_ip_hook.c</locationURI>
-		</link>
-		<link>
 			<name>vendors/renesas/rx_driver_package/v125/r_bsp/mcu/all/dbsct.c</name>
 			<type>1</type>
 			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v125/r_bsp/mcu/all/dbsct.c</locationURI>
@@ -436,65 +431,35 @@
 			<type>1</type>
 			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v125/r_byteq/src/r_byteq_private.h</locationURI>
 		</link>
-		<link>
-			<name>vendors/renesas/rx_driver_package/v125/r_ether_rx/src/phy/phy.c</name>
+        <link>
+			<name>vendors/renesas/rx_driver_package/v125/r_wifi_sx_ulpgn/r_wifi_sx_ulpgn_if.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v125/r_ether_rx/src/phy/phy.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v129/r_wifi_sx_ulpgn/r_wifi_sx_ulpgn_if.h</locationURI>
 		</link>
-		<link>
-			<name>vendors/renesas/rx_driver_package/v125/r_ether_rx/src/r_ether_rx.c</name>
+        <link>
+			<name>vendors/renesas/rx_driver_package/v125/r_wifi_sx_ulpgn/ref/r_wifi_sx_ulpgn_config_reference.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v125/r_ether_rx/src/r_ether_rx.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v125/r_wifi_sx_ulpgn/ref/r_wifi_sx_ulpgn_config_reference.h</locationURI>
 		</link>
-		<link>
-			<name>vendors/renesas/rx_driver_package/v125/r_ether_rx/src/targets/rx64m/r_ether_setting_rx64m.c</name>
+        <link>
+			<name>vendors/renesas/rx_driver_package/v125/r_wifi_sx_ulpgn/src/r_wifi_sx_ulpgn_private.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v125/r_ether_rx/src/targets/rx64m/r_ether_setting_rx64m.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v125/r_wifi_sx_ulpgn/src/r_wifi_sx_ulpgn_private.h</locationURI>
 		</link>
-		<link>
-			<name>vendors/renesas/rx_driver_package/v125/r_ether_rx/src/targets/rx65n/r_ether_setting_rx65n.c</name>
+        <link>
+			<name>vendors/renesas/rx_driver_package/v125/r_wifi_sx_ulpgn/src/r_wifi_sx_ulpgn_api.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v125/r_ether_rx/src/targets/rx65n/r_ether_setting_rx65n.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v125/r_wifi_sx_ulpgn/src/r_wifi_sx_ulpgn_api.c</locationURI>
 		</link>
-		<link>
-			<name>vendors/renesas/rx_driver_package/v125/r_ether_rx/src/targets/rx66n/r_ether_setting_rx66n.c</name>
+        <link>
+			<name>vendors/renesas/rx_driver_package/v125/r_wifi_sx_ulpgn/src/r_wifi_sx_ulpgn_queue.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v125/r_ether_rx/src/targets/rx66n/r_ether_setting_rx66n.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v125/r_wifi_sx_ulpgn/src/r_wifi_sx_ulpgn_queue.c</locationURI>
 		</link>
-		<link>
-			<name>vendors/renesas/rx_driver_package/v125/r_ether_rx/src/targets/rx71m/r_ether_setting_rx71m.c</name>
+        <link>
+			<name>vendors/renesas/rx_driver_package/v125/r_wifi_sx_ulpgn/src/r_wifi_sx_ulpgn_recv_task.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v125/r_ether_rx/src/targets/rx71m/r_ether_setting_rx71m.c</locationURI>
-		</link>
-		<link>
-			<name>vendors/renesas/rx_driver_package/v125/r_ether_rx/src/targets/rx72m/r_ether_setting_rx72m.c</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v125/r_ether_rx/src/targets/rx72m/r_ether_setting_rx72m.c</locationURI>
-		</link>
-		<link>
-			<name>vendors/renesas/rx_driver_package/v125/r_ether_rx/src/targets/rx72n/r_ether_setting_rx72n.c</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v125/r_ether_rx/src/targets/rx72n/r_ether_setting_rx72n.c</locationURI>
-		</link>
-		<link>
-			<name>vendors/renesas/rx_driver_package/v125/r_ether_rx/r_ether_rx_if.h</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v125/r_ether_rx/r_ether_rx_if.h</locationURI>
-		</link>
-		<link>
-			<name>vendors/renesas/rx_driver_package/v125/r_ether_rx/ref/r_ether_rx_config_reference.h</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v125/r_ether_rx/ref/r_ether_rx_config_reference.h</locationURI>
-		</link>
-		<link>
-			<name>vendors/renesas/rx_driver_package/v125/r_ether_rx/src/phy/phy.h</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v125/r_ether_rx/src/phy/phy.h</locationURI>
-		</link>
-		<link>
-			<name>vendors/renesas/rx_driver_package/v125/r_ether_rx/src/r_ether_rx_private.h</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v125/r_ether_rx/src/r_ether_rx_private.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v125/r_wifi_sx_ulpgn/src/r_wifi_sx_ulpgn_recv_task.c</locationURI>
 		</link>
 		<link>
 			<name>vendors/renesas/rx_driver_package/v125/r_flash_rx/src/flash_type_1/r_codeflash.c</name>
@@ -922,129 +887,119 @@
 			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/rx_driver_package/v125/r_sci_rx/src/targets/rx65n/r_sci_rx65n_private.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-rsk/aws_tests/src/smc_gen/general/r_cg_hardware_setup.c</name>
+			<name>vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/src/smc_gen/general/r_cg_hardware_setup.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_tests/src/smc_gen/general/r_cg_hardware_setup.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/src/smc_gen/general/r_cg_hardware_setup.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-rsk/aws_tests/src/smc_gen/general/r_smc_cgc.c</name>
+			<name>vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/src/smc_gen/general/r_smc_cgc.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_tests/src/smc_gen/general/r_smc_cgc.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/src/smc_gen/general/r_smc_cgc.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-rsk/aws_tests/src/smc_gen/general/r_smc_cgc_user.c</name>
+			<name>vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/src/smc_gen/general/r_smc_cgc_user.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_tests/src/smc_gen/general/r_smc_cgc_user.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/src/smc_gen/general/r_smc_cgc_user.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-rsk/aws_tests/src/smc_gen/general/r_smc_interrupt.c</name>
+			<name>vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/src/smc_gen/general/r_smc_interrupt.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_tests/src/smc_gen/general/r_smc_interrupt.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/src/smc_gen/general/r_smc_interrupt.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-rsk/aws_tests/src/smc_gen/r_pincfg/Pin.c</name>
+			<name>vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/src/smc_gen/r_pincfg/Pin.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_tests/src/smc_gen/r_pincfg/Pin.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/src/smc_gen/r_pincfg/Pin.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-rsk/aws_tests/src/smc_gen/r_pincfg/r_ether_rx_pinset.c</name>
+			<name>vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/src/smc_gen/r_pincfg/r_s12ad_rx_pinset.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_tests/src/smc_gen/r_pincfg/r_ether_rx_pinset.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/src/smc_gen/r_pincfg/r_s12ad_rx_pinset.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-rsk/aws_tests/src/smc_gen/r_pincfg/r_s12ad_rx_pinset.c</name>
+			<name>vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/src/smc_gen/r_pincfg/r_sci_rx_pinset.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_tests/src/smc_gen/r_pincfg/r_s12ad_rx_pinset.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/src/smc_gen/r_pincfg/r_sci_rx_pinset.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-rsk/aws_tests/src/smc_gen/r_pincfg/r_sci_rx_pinset.c</name>
+			<name>vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/src/smc_gen/general/r_cg_macrodriver.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_tests/src/smc_gen/r_pincfg/r_sci_rx_pinset.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/src/smc_gen/general/r_cg_macrodriver.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-rsk/aws_tests/src/smc_gen/general/r_cg_macrodriver.h</name>
+			<name>vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/src/smc_gen/general/r_cg_userdefine.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_tests/src/smc_gen/general/r_cg_macrodriver.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/src/smc_gen/general/r_cg_userdefine.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-rsk/aws_tests/src/smc_gen/general/r_cg_userdefine.h</name>
+			<name>vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/src/smc_gen/general/r_smc_cgc.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_tests/src/smc_gen/general/r_cg_userdefine.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/src/smc_gen/general/r_smc_cgc.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-rsk/aws_tests/src/smc_gen/general/r_smc_cgc.h</name>
+			<name>vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/src/smc_gen/general/r_smc_entry.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_tests/src/smc_gen/general/r_smc_cgc.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/src/smc_gen/general/r_smc_entry.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-rsk/aws_tests/src/smc_gen/general/r_smc_entry.h</name>
+			<name>vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/src/smc_gen/general/r_smc_interrupt.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_tests/src/smc_gen/general/r_smc_entry.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/src/smc_gen/general/r_smc_interrupt.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-rsk/aws_tests/src/smc_gen/general/r_smc_interrupt.h</name>
+			<name>vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/src/smc_gen/r_config/r_bsp_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_tests/src/smc_gen/general/r_smc_interrupt.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/src/smc_gen/r_config/r_bsp_config.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-rsk/aws_tests/src/smc_gen/r_config/r_bsp_config.h</name>
+			<name>vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/src/smc_gen/r_config/r_bsp_interrupt_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_tests/src/smc_gen/r_config/r_bsp_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/src/smc_gen/r_config/r_bsp_interrupt_config.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-rsk/aws_tests/src/smc_gen/r_config/r_bsp_interrupt_config.h</name>
+			<name>vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/src/smc_gen/r_config/r_byteq_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_tests/src/smc_gen/r_config/r_bsp_interrupt_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/src/smc_gen/r_config/r_byteq_config.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-rsk/aws_tests/src/smc_gen/r_config/r_byteq_config.h</name>
+			<name>vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/src/smc_gen/r_config/r_flash_rx_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_tests/src/smc_gen/r_config/r_byteq_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/src/smc_gen/r_config/r_flash_rx_config.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-rsk/aws_tests/src/smc_gen/r_config/r_ether_rx_config.h</name>
+			<name>vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/src/smc_gen/r_config/r_s12ad_rx_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_tests/src/smc_gen/r_config/r_ether_rx_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/src/smc_gen/r_config/r_s12ad_rx_config.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-rsk/aws_tests/src/smc_gen/r_config/r_flash_rx_config.h</name>
+			<name>vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/src/smc_gen/r_config/r_sci_rx_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_tests/src/smc_gen/r_config/r_flash_rx_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/src/smc_gen/r_config/r_sci_rx_config.h</locationURI>
+		</link>
+        <link>
+			<name>vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/src/smc_gen/r_config/r_wifi_sx_ulpgn_config.h</name>
+			<type>1</type>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/src/smc_gen/r_config/r_wifi_sx_ulpgn_config.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-rsk/aws_tests/src/smc_gen/r_config/r_s12ad_rx_config.h</name>
+			<name>vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/src/smc_gen/r_pincfg/Pin.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_tests/src/smc_gen/r_config/r_s12ad_rx_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/src/smc_gen/r_pincfg/Pin.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-rsk/aws_tests/src/smc_gen/r_config/r_sci_rx_config.h</name>
+			<name>vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/src/smc_gen/r_pincfg/r_pinset.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_tests/src/smc_gen/r_config/r_sci_rx_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/src/smc_gen/r_pincfg/r_pinset.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-rsk/aws_tests/src/smc_gen/r_pincfg/Pin.h</name>
+			<name>vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/src/smc_gen/r_pincfg/r_s12ad_rx_pinset.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_tests/src/smc_gen/r_pincfg/Pin.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/src/smc_gen/r_pincfg/r_s12ad_rx_pinset.h</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-rsk/aws_tests/src/smc_gen/r_pincfg/r_ether_rx_pinset.h</name>
+			<name>vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/src/smc_gen/r_pincfg/r_sci_rx_pinset.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_tests/src/smc_gen/r_pincfg/r_ether_rx_pinset.h</locationURI>
-		</link>
-		<link>
-			<name>vendors/renesas/boards/rx65n-rsk/aws_tests/src/smc_gen/r_pincfg/r_pinset.h</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_tests/src/smc_gen/r_pincfg/r_pinset.h</locationURI>
-		</link>
-		<link>
-			<name>vendors/renesas/boards/rx65n-rsk/aws_tests/src/smc_gen/r_pincfg/r_s12ad_rx_pinset.h</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_tests/src/smc_gen/r_pincfg/r_s12ad_rx_pinset.h</locationURI>
-		</link>
-		<link>
-			<name>vendors/renesas/boards/rx65n-rsk/aws_tests/src/smc_gen/r_pincfg/r_sci_rx_pinset.h</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_tests/src/smc_gen/r_pincfg/r_sci_rx_pinset.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/src/smc_gen/r_pincfg/r_sci_rx_pinset.h</locationURI>
 		</link>
 		<link>
 			<name>freertos_kernel/portable/MemMang/heap_4.c</name>
@@ -1196,6 +1151,16 @@
 			<type>1</type>
 			<locationURI>AWS_IOT_MCU_ROOT/libraries/c_sdk/standard/common/include/private/iot_taskpool_internal.h</locationURI>
 		</link>
+        <link>
+			<name>libraries/abstractions/wifi/test</name>
+			<type>2</type>
+			<locationURI>AWS_IOT_MCU_ROOT/libraries/abstractions/wifi/test</locationURI>
+		</link>
+        <link>
+			<name>libraries/abstractions/wifi/include/iot_wifi.h</name>
+			<type>1</type>
+			<locationURI>AWS_IOT_MCU_ROOT/libraries/abstractions/wifi/include/iot_wifi.h</locationURI>
+		</link>
 		<link>
 			<name>libraries/abstractions/platform/include/platform/iot_clock.h</name>
 			<type>1</type>
@@ -1267,155 +1232,15 @@
 			<locationURI>AWS_IOT_MCU_ROOT/libraries/abstractions/secure_sockets/include/iot_secure_sockets_wrapper_metrics.h</locationURI>
 		</link>
 		<link>
-			<name>libraries/abstractions/secure_sockets/freertos_plus_tcp/iot_secure_sockets.c</name>
+			<name>vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/ports/secure_sockets/iot_secure_sockets.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/libraries/abstractions/secure_sockets/freertos_plus_tcp/iot_secure_sockets.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/ports/secure_sockets/iot_secure_sockets.c</locationURI>
 		</link>
-		<link>
-			<name>libraries/freertos_plus/standard/freertos_plus_tcp/FreeRTOS_ARP.c</name>
+        <link>
+			<name>vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/ports/wifi/iot_wifi.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/libraries/freertos_plus/standard/freertos_plus_tcp/FreeRTOS_ARP.c</locationURI>
-		</link>
-		<link>
-			<name>libraries/freertos_plus/standard/freertos_plus_tcp/FreeRTOS_DHCP.c</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/libraries/freertos_plus/standard/freertos_plus_tcp/FreeRTOS_DHCP.c</locationURI>
-		</link>
-		<link>
-			<name>libraries/freertos_plus/standard/freertos_plus_tcp/FreeRTOS_DNS.c</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/libraries/freertos_plus/standard/freertos_plus_tcp/FreeRTOS_DNS.c</locationURI>
-		</link>
-		<link>
-			<name>libraries/freertos_plus/standard/freertos_plus_tcp/FreeRTOS_IP.c</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/libraries/freertos_plus/standard/freertos_plus_tcp/FreeRTOS_IP.c</locationURI>
-		</link>
-		<link>
-			<name>libraries/freertos_plus/standard/freertos_plus_tcp/FreeRTOS_Sockets.c</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/libraries/freertos_plus/standard/freertos_plus_tcp/FreeRTOS_Sockets.c</locationURI>
-		</link>
-		<link>
-			<name>libraries/freertos_plus/standard/freertos_plus_tcp/FreeRTOS_Stream_Buffer.c</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/libraries/freertos_plus/standard/freertos_plus_tcp/FreeRTOS_Stream_Buffer.c</locationURI>
-		</link>
-		<link>
-			<name>libraries/freertos_plus/standard/freertos_plus_tcp/FreeRTOS_TCP_IP.c</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/libraries/freertos_plus/standard/freertos_plus_tcp/FreeRTOS_TCP_IP.c</locationURI>
-		</link>
-		<link>
-			<name>libraries/freertos_plus/standard/freertos_plus_tcp/FreeRTOS_TCP_WIN.c</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/libraries/freertos_plus/standard/freertos_plus_tcp/FreeRTOS_TCP_WIN.c</locationURI>
-		</link>
-		<link>
-			<name>libraries/freertos_plus/standard/freertos_plus_tcp/FreeRTOS_UDP_IP.c</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/libraries/freertos_plus/standard/freertos_plus_tcp/FreeRTOS_UDP_IP.c</locationURI>
-		</link>
-		<link>
-			<name>libraries/freertos_plus/standard/freertos_plus_tcp/include/FreeRTOSIPConfigDefaults.h</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/libraries/freertos_plus/standard/freertos_plus_tcp/include/FreeRTOSIPConfigDefaults.h</locationURI>
-		</link>
-		<link>
-			<name>libraries/freertos_plus/standard/freertos_plus_tcp/include/FreeRTOS_ARP.h</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/libraries/freertos_plus/standard/freertos_plus_tcp/include/FreeRTOS_ARP.h</locationURI>
-		</link>
-		<link>
-			<name>libraries/freertos_plus/standard/freertos_plus_tcp/include/FreeRTOS_DHCP.h</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/libraries/freertos_plus/standard/freertos_plus_tcp/include/FreeRTOS_DHCP.h</locationURI>
-		</link>
-		<link>
-			<name>libraries/freertos_plus/standard/freertos_plus_tcp/include/FreeRTOS_DNS.h</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/libraries/freertos_plus/standard/freertos_plus_tcp/include/FreeRTOS_DNS.h</locationURI>
-		</link>
-		<link>
-			<name>libraries/freertos_plus/standard/freertos_plus_tcp/include/FreeRTOS_IP.h</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/libraries/freertos_plus/standard/freertos_plus_tcp/include/FreeRTOS_IP.h</locationURI>
-		</link>
-		<link>
-			<name>libraries/freertos_plus/standard/freertos_plus_tcp/include/FreeRTOS_IP_Private.h</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/libraries/freertos_plus/standard/freertos_plus_tcp/include/FreeRTOS_IP_Private.h</locationURI>
-		</link>
-		<link>
-			<name>libraries/freertos_plus/standard/freertos_plus_tcp/include/FreeRTOS_Sockets.h</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/libraries/freertos_plus/standard/freertos_plus_tcp/include/FreeRTOS_Sockets.h</locationURI>
-		</link>
-		<link>
-			<name>libraries/freertos_plus/standard/freertos_plus_tcp/include/FreeRTOS_Stream_Buffer.h</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/libraries/freertos_plus/standard/freertos_plus_tcp/include/FreeRTOS_Stream_Buffer.h</locationURI>
-		</link>
-		<link>
-			<name>libraries/freertos_plus/standard/freertos_plus_tcp/include/FreeRTOS_TCP_IP.h</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/libraries/freertos_plus/standard/freertos_plus_tcp/include/FreeRTOS_TCP_IP.h</locationURI>
-		</link>
-		<link>
-			<name>libraries/freertos_plus/standard/freertos_plus_tcp/include/FreeRTOS_TCP_WIN.h</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/libraries/freertos_plus/standard/freertos_plus_tcp/include/FreeRTOS_TCP_WIN.h</locationURI>
-		</link>
-		<link>
-			<name>libraries/freertos_plus/standard/freertos_plus_tcp/include/FreeRTOS_UDP_IP.h</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/libraries/freertos_plus/standard/freertos_plus_tcp/include/FreeRTOS_UDP_IP.h</locationURI>
-		</link>
-		<link>
-			<name>libraries/freertos_plus/standard/freertos_plus_tcp/include/FreeRTOS_errno_TCP.h</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/libraries/freertos_plus/standard/freertos_plus_tcp/include/FreeRTOS_errno_TCP.h</locationURI>
-		</link>
-		<link>
-			<name>libraries/freertos_plus/standard/freertos_plus_tcp/include/IPTraceMacroDefaults.h</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/libraries/freertos_plus/standard/freertos_plus_tcp/include/IPTraceMacroDefaults.h</locationURI>
-		</link>
-		<link>
-			<name>libraries/freertos_plus/standard/freertos_plus_tcp/include/NetworkBufferManagement.h</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/libraries/freertos_plus/standard/freertos_plus_tcp/include/NetworkBufferManagement.h</locationURI>
-		</link>
-		<link>
-			<name>libraries/freertos_plus/standard/freertos_plus_tcp/include/NetworkInterface.h</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/libraries/freertos_plus/standard/freertos_plus_tcp/include/NetworkInterface.h</locationURI>
-		</link>
-		<link>
-			<name>libraries/freertos_plus/standard/freertos_plus_tcp/portable/BufferManagement/BufferAllocation_2.c</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/libraries/freertos_plus/standard/freertos_plus_tcp/portable/BufferManagement/BufferAllocation_2.c</locationURI>
-		</link>
-		<link>
-			<name>libraries/freertos_plus/standard/freertos_plus_tcp/portable/NetworkInterface/RX/ether_callback.c</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/libraries/freertos_plus/standard/freertos_plus_tcp/portable/NetworkInterface/RX/ether_callback.c</locationURI>
-		</link>
-		<link>
-			<name>libraries/freertos_plus/standard/freertos_plus_tcp/portable/NetworkInterface/RX/NetworkInterface.c</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/libraries/freertos_plus/standard/freertos_plus_tcp/portable/NetworkInterface/RX/NetworkInterface.c</locationURI>
-		</link>
-		<link>
-			<name>libraries/freertos_plus/standard/freertos_plus_tcp/portable/Compiler/Renesas/pack_struct_end.h</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/libraries/freertos_plus/standard/freertos_plus_tcp/portable/Compiler/Renesas/pack_struct_end.h</locationURI>
-		</link>
-		<link>
-			<name>libraries/freertos_plus/standard/freertos_plus_tcp/portable/Compiler/Renesas/pack_struct_start.h</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/libraries/freertos_plus/standard/freertos_plus_tcp/portable/Compiler/Renesas/pack_struct_start.h</locationURI>
-		</link>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/ports/wifi/iot_wifi.c</locationURI>
+		</link>        
 		<link>
 			<name>libraries/freertos_plus/standard/tls/src/iot_tls.c</name>
 			<type>1</type>
@@ -1447,9 +1272,9 @@
 			<locationURI>AWS_IOT_MCU_ROOT/libraries/abstractions/pkcs11/corePKCS11/source/core_pkcs11.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-rsk/ports/pkcs11/core_pkcs11_pal.c</name>
+			<name>vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/ports/pkcs11/core_pkcs11_pal.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/ports/pkcs11/core_pkcs11_pal.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/ports/pkcs11/core_pkcs11_pal.c</locationURI>
 		</link>
 		<link>
 			<name>libraries/abstractions/pkcs11/corePKCS11/source/portable/mbedtls/core_pkcs11_mbedtls.c</name>
@@ -1766,7 +1591,7 @@
 			<type>1</type>
 			<locationURI>AWS_IOT_MCU_ROOT/libraries/c_sdk/aws/shadow/include/aws_shadow.h</locationURI>
 		</link>
-		<link>
+        <link>
 			<name>libraries/c_sdk/standard/https/src/iot_https_client.c</name>
 			<type>1</type>
 			<locationURI>AWS_IOT_MCU_ROOT/libraries/c_sdk/standard/https/src/iot_https_client.c</locationURI>
@@ -1882,9 +1707,9 @@
 			<locationURI>AWS_IOT_MCU_ROOT/libraries/3rdparty/mbedtls/library/base64.c</locationURI>
 		</link>
 		<link>
-			<name>vendors/renesas/boards/rx65n-rsk/ports/ota/aws_ota_pal.c</name>
+			<name>vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/ports/ota/aws_ota_pal.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/ports/ota/aws_ota_pal.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/ports/ota/aws_ota_pal.c</locationURI>
 		</link>
 		<link>
 			<name>libraries/freertos_plus/aws/ota/src/mqtt/aws_iot_ota_cbor_internal.h</name>
@@ -1910,16 +1735,6 @@
 			<name>libraries/freertos_plus/aws/ota/src/mqtt/aws_iot_ota_mqtt.h</name>
 			<type>1</type>
 			<locationURI>AWS_IOT_MCU_ROOT/libraries/freertos_plus/aws/ota/src/mqtt/aws_iot_ota_mqtt.h</locationURI>
-		</link>
-		<link>
-			<name>libraries/freertos_plus/aws/ota/src/http/aws_iot_ota_http.c</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/libraries/freertos_plus/aws/ota/src/http/aws_iot_ota_http.c</locationURI>
-		</link>
-		<link>
-			<name>libraries/freertos_plus/aws/ota/src/http/aws_iot_ota_http.h</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/libraries/freertos_plus/aws/ota/src/http/aws_iot_ota_http.h</locationURI>
 		</link>
 		<link>
 			<name>libraries/freertos_plus/standard/freertos_plus_cli/source/FreeRTOS_CLI.c</name>
@@ -1960,51 +1775,6 @@
 			<name>demos/common/mqtt_demo_helpers/mqtt_demo_helpers.c</name>
 			<type>1</type>
 			<locationURI>AWS_IOT_MCU_ROOT/demos/common/mqtt_demo_helpers/mqtt_demo_helpers.c</locationURI>
-		</link>
-		<link>
-			<name>libraries/device_defender_for_aws/source/defender.c</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/libraries/device_defender_for_aws/source/defender.c</locationURI>
-		</link>
-		<link>
-			<name>libraries/device_defender_for_aws/source/include/defender.h</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/libraries/device_defender_for_aws/source/include/defender.h</locationURI>
-		</link>
-		<link>
-			<name>libraries/device_defender_for_aws/source/include/defender_config_defaults.h</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/libraries/device_defender_for_aws/source/include/defender_config_defaults.h</locationURI>
-		</link>
-		<link>
-			<name>libraries/freertos_plus/standard/freertos_plus_tcp/tools/tcp_utilities/tcp_dump_packets.c</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/libraries/freertos_plus/standard/freertos_plus_tcp/tools/tcp_utilities/tcp_dump_packets.c</locationURI>
-		</link>
-		<link>
-			<name>libraries/freertos_plus/standard/freertos_plus_tcp/tools/tcp_utilities/tcp_mem_stats.c</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/libraries/freertos_plus/standard/freertos_plus_tcp/tools/tcp_utilities/tcp_mem_stats.c</locationURI>
-		</link>
-		<link>
-			<name>libraries/freertos_plus/standard/freertos_plus_tcp/tools/tcp_utilities/tcp_netstat.c</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/libraries/freertos_plus/standard/freertos_plus_tcp/tools/tcp_utilities/tcp_netstat.c</locationURI>
-		</link>
-		<link>
-			<name>libraries/freertos_plus/standard/freertos_plus_tcp/tools/tcp_utilities/include/tcp_dump_packets.h</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/libraries/freertos_plus/standard/freertos_plus_tcp/tools/tcp_utilities/include/tcp_dump_packets.h</locationURI>
-		</link>
-		<link>
-			<name>libraries/freertos_plus/standard/freertos_plus_tcp/tools/tcp_utilities/include/tcp_mem_stats.h</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/libraries/freertos_plus/standard/freertos_plus_tcp/tools/tcp_utilities/include/tcp_mem_stats.h</locationURI>
-		</link>
-		<link>
-			<name>libraries/freertos_plus/standard/freertos_plus_tcp/tools/tcp_utilities/include/tcp_netstat.h</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/libraries/freertos_plus/standard/freertos_plus_tcp/tools/tcp_utilities/include/tcp_netstat.h</locationURI>
 		</link>
 		<link>
 			<name>libraries/jobs_for_aws/source/jobs.c</name>
@@ -2222,134 +1992,129 @@
 			<locationURI>AWS_IOT_MCU_ROOT/tests/integration_test/core_http_system_test.c</locationURI>
 		</link>
 		<link>
-			<name>tests/integration_test/test_freertos_tcp.c</name>
-			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/tests/integration_test/test_freertos_tcp.c</locationURI>
-		</link>
-		<link>
 			<name>config_files/FreeRTOSConfig.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_tests/config_files/FreeRTOSConfig.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/config_files/FreeRTOSConfig.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/FreeRTOSIPConfig.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_tests/config_files/FreeRTOSIPConfig.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/config_files/FreeRTOSIPConfig.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/aws_bufferpool_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_tests/config_files/aws_bufferpool_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/config_files/aws_bufferpool_config.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/aws_ggd_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_tests/config_files/aws_ggd_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/config_files/aws_ggd_config.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/aws_iot_network_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_tests/config_files/aws_iot_network_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/config_files/aws_iot_network_config.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/aws_mqtt_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_tests/config_files/aws_mqtt_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/config_files/aws_mqtt_config.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/aws_ota_agent_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_tests/config_files/aws_ota_agent_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/config_files/aws_ota_agent_config.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/aws_secure_sockets_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_tests/config_files/aws_secure_sockets_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/config_files/aws_secure_sockets_config.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/aws_shadow_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_tests/config_files/aws_shadow_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/config_files/aws_shadow_config.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/aws_test_ota_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_tests/config_files/aws_test_ota_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/config_files/aws_test_ota_config.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/aws_test_runner_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_tests/config_files/aws_test_runner_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/config_files/aws_test_runner_config.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/aws_test_tcp_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_tests/config_files/aws_test_tcp_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/config_files/aws_test_tcp_config.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/aws_test_wifi_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_tests/config_files/aws_test_wifi_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/config_files/aws_test_wifi_config.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/aws_wifi_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_tests/config_files/aws_wifi_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/config_files/aws_wifi_config.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/core_http_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_tests/config_files/core_http_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/config_files/core_http_config.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/core_mqtt_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_tests/config_files/core_mqtt_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/config_files/core_mqtt_config.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/core_pkcs11_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_tests/config_files/core_pkcs11_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/config_files/core_pkcs11_config.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/core_test_pkcs11_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_tests/config_files/core_test_pkcs11_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/config_files/core_test_pkcs11_config.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/defender_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_tests/config_files/defender_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/config_files/defender_config.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/iot_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_tests/config_files/iot_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/config_files/iot_config.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/iot_mqtt_agent_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_tests/config_files/iot_mqtt_agent_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/config_files/iot_mqtt_agent_config.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/mbedtls_user_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_tests/config_files/mbedtls_user_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/config_files/mbedtls_user_config.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/shadow_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_tests/config_files/shadow_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/config_files/shadow_config.h</locationURI>
 		</link>
 		<link>
 			<name>config_files/unity_config.h</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_tests/config_files/unity_config.h</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/config_files/unity_config.h</locationURI>
 		</link>
 		<link>
 			<name>application_code/main.c</name>
 			<type>1</type>
-			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-rsk/aws_tests/application_code/main.c</locationURI>
+			<locationURI>AWS_IOT_MCU_ROOT/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_tests/application_code/main.c</locationURI>
 		</link>
 		<link>
 			<name>libraries/3rdparty/mbedtls/library/aes.c</name>
@@ -3249,11 +3014,11 @@
 		</variable>
 		<variable>
 			<name>SMC_GENERATED_LOC</name>
-			<value>$%7BAFR_HOME%7D/vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen</value>
+			<value>$%7BAFR_HOME%7D/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/src/smc_gen</value>
 		</variable>
 		<variable>
 			<name>SMC_LINKED_LOC</name>
-			<value>$%7BPROJECT_LOC%7D/vendors/renesas/boards/rx65n-rsk/aws_demos/src/smc_gen</value>
+			<value>$%7BPROJECT_LOC%7D/vendors/renesas/boards/rx65n-cloud-kit-uart-sx-ulpgn/aws_demos/src/smc_gen</value>
 		</variable>
 	</variableList>
 </projectDescription>
