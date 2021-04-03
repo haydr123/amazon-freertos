@@ -39,6 +39,7 @@
 /* Renesas RX Driver Package include */
 #include "platform.h"
 #include "r_flash_rx_if.h"
+#include "r_cg_macrodriver.h"
 
 /* Specify the OTA signature algorithm we support on this platform. */
 //const char cOTA_JSON_FileSignatureKey[ OTA_FILE_SIG_KEY_STR_MAX_LENGTH ] = "sig-sha1-rsa";   /* FIX ME. */
