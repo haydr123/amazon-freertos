@@ -211,75 +211,91 @@ void vApplicationDaemonTaskStartupHook( void )
 // RX65N Cloud Kit 20200923 -->>
 static bool _wifiConnectAccessPoint( void )
 {
-    bool ret = false;
-    size_t xSSIDLength, xPasswordLength;
-    static WIFINetworkParams_t xNetworkParams = { 0 };
+	bool status = true;
+	WIFINetworkParams_t xConnectParams;
+	size_t xSSIDLength, xPasswordLength;
+	const char * pcSSID = clientcredentialWIFI_SSID;
+	const char * pcPassword = clientcredentialWIFI_PASSWORD;
+	WIFISecurity_t xSecurity = clientcredentialWIFI_SECURITY;
+	uint32_t numRetries = _NM_WIFI_CONNECTION_RETRIES;
+	uint32_t delayMilliseconds = _NM_WIFI_CONNECTION_RETRY_INTERVAL_MS;
 
-    /* Setup WiFi parameters to connect to access point. */
-	if( clientcredentialWIFI_SSID != NULL )
+	if( pcSSID != NULL )
 	{
-		xSSIDLength = strlen( clientcredentialWIFI_SSID );
-		if( ( xSSIDLength > 0 ) && ( xSSIDLength <= wificonfigMAX_SSID_LEN ) )
+		xSSIDLength = strlen( pcSSID );
+
+		if( ( xSSIDLength > 0 ) && ( xSSIDLength < wificonfigMAX_SSID_LEN ) )
 		{
-			xNetworkParams.ucSSIDLength = xSSIDLength;
-			memcpy( xNetworkParams.ucSSID, clientcredentialWIFI_SSID, xSSIDLength );
+			xConnectParams.ucSSIDLength = xSSIDLength;
+			memset( xConnectParams.ucSSID, 0, wificonfigMAX_SSID_LEN );
+			memcpy( xConnectParams.ucSSID, clientcredentialWIFI_SSID, xSSIDLength );
 		}
 		else
 		{
-			configPRINTF(( "Invalid WiFi SSID configured, empty or exceeds allowable length %d.\n", wificonfigMAX_SSID_LEN ));
+			status = false;
 		}
 	}
 	else
 	{
-		configPRINTF(( "WiFi SSID is not configured.\n" ));
+		status = false;
 	}
 
-	xNetworkParams.xSecurity = clientcredentialWIFI_SECURITY;
-	if( clientcredentialWIFI_SECURITY == eWiFiSecurityWPA2 )
+	xConnectParams.xSecurity = xSecurity;
+
+	if( xSecurity == eWiFiSecurityWPA2 )
 	{
-		if( clientcredentialWIFI_PASSWORD != NULL )
+		if( pcPassword != NULL )
 		{
 			xPasswordLength = strlen( clientcredentialWIFI_PASSWORD );
-			if( ( xPasswordLength > 0 ) && ( xSSIDLength <= wificonfigMAX_PASSPHRASE_LEN ) )
+	    	configPRINTF( ( "pass length %d \r\n", xPasswordLength) );
+
+			if( ( xPasswordLength > 0 ) && ( xPasswordLength < wificonfigMAX_PASSPHRASE_LEN ) )
 			{
-				xNetworkParams.xPassword.xWPA.ucLength = xPasswordLength;
-				memcpy( xNetworkParams.xPassword.xWPA.cPassphrase, clientcredentialWIFI_PASSWORD, xPasswordLength );
+				xConnectParams.xPassword.xWPA.ucLength = xPasswordLength;
+				memset( xConnectParams.xPassword.xWPA.cPassphrase, 0, wificonfigMAX_PASSPHRASE_LEN );
+				memcpy( xConnectParams.xPassword.xWPA.cPassphrase, clientcredentialWIFI_PASSWORD, xPasswordLength );
+		    	configPRINTF( ( "pass is:%s. \r\n", xConnectParams.xPassword.xWPA.cPassphrase) );
 			}
 			else
 			{
-				configPRINTF(( "Invalid WiFi password configured, empty password or exceeds allowable password length %d.\n", wificonfigMAX_PASSPHRASE_LEN ));
+				status = false;
 			}
 		}
 		else
 		{
-			configPRINTF(( "WiFi password is not configured.\n" ));
+			status = false;
 		}
 	}
-	xNetworkParams.ucChannel = 0;
 
-    uint32_t numRetries = _NM_WIFI_CONNECTION_RETRIES;
-    uint32_t delayMilliseconds = _NM_WIFI_CONNECTION_RETRY_INTERVAL_MS;
+	if( status == true )
+	{
+		/* Try to connect to wifi access point with retry and exponential delay */
+		do
+		{
+	    	configPRINTF( ( "Try connecting wifi no %d,%s,%s. \r\n", numRetries, xConnectParams.ucSSID, xConnectParams.xPassword.xWPA.cPassphrase ) );
 
+			if( WIFI_ConnectAP( &( xConnectParams ) ) == eWiFiSuccess )
+			{
+				configPRINTF( ( "Connect wifi OK on retry no %d.\r\n", numRetries ) );
+				break;
+			}
+			else
+			{
+				configPRINTF( ( "Connect wifi Failed on retry no %d.\r\n", numRetries ) );
+				if( numRetries > 0 )
+				{
+					IotClock_SleepMs( delayMilliseconds );
+					delayMilliseconds = delayMilliseconds * 2;
+				}
+				else
+				{
+					status = false;
+				}
+			}
+		} while( numRetries-- > 0 );
+	}
 
-    /* Try to connect to wifi access point with retry and exponential delay */
-    do
-    {
-        if( WIFI_ConnectAP( &( xNetworkParams ) ) == eWiFiSuccess )
-        {
-            ret = true;
-            break;
-        }
-        else
-        {
-            if( numRetries > 0 )
-            {
-                IotClock_SleepMs( delayMilliseconds );
-                delayMilliseconds = delayMilliseconds * 2;
-            }
-        }
-    } while( numRetries-- > 0 );
-
-    return ret;
+	return status;
 }
 
 
