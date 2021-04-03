@@ -166,9 +166,16 @@ WIFIReturnCode_t WIFI_ConnectAP( const WIFINetworkParams_t * const pxNetworkPara
 #else
 	dhcp_enable = 1;
 #endif
+
+	//work around to fix the bug when memcopy ssid and passphrase
+	uint8_t ssid[ wificonfigMAX_SSID_LEN ] = {0};
+	uint8_t password[ wificonfigMAX_PASSPHRASE_LEN ] = {0};
+	memcpy( ssid, pxNetworkParams->ucSSID, pxNetworkParams->ucSSIDLength );
+	memcpy( password, pxNetworkParams->xPassword.xWPA.cPassphrase, pxNetworkParams->xPassword.xWPA.ucLength );
+
 	ret = R_WIFI_SX_ULPGN_Connect(
-			pxNetworkParams->ucSSID,
-			pxNetworkParams->xPassword.xWPA.cPassphrase,
+			ssid,
+			password,
 			convert_security,
 			dhcp_enable,
 			&ipconfig
