@@ -127,7 +127,6 @@ static bool _wifiEnable( void );	// RX65N Cloud Kit 20200923
  */
 void main( void )
 {
-	nop();
     /* Perform any hardware initialization that does not require the RTOS to be
      * running.  */
 
