@@ -22,7 +22,7 @@
 				<configuration artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug" cleanCommand="rm -rf *.lst *.lis *.lpp *.map" description="" errorParsers="org.eclipse.cdt.core.GASErrorParser;org.eclipse.cdt.core.GmakeErrorParser;org.eclipse.cdt.core.GLDErrorParser;org.eclipse.cdt.core.CWDLocator;org.eclipse.cdt.core.GCCErrorParser" id="com.renesas.cdt.managedbuild.gcc.rx.configuration.debug.501166101" name="HardwareDebug" parent="com.renesas.cdt.managedbuild.gcc.rx.configuration.debug">
 					<folderInfo id="com.renesas.cdt.managedbuild.gcc.rx.configuration.debug.501166101." name="/" resourcePath="">
 						<toolChain id="com.renesas.cdt.managedbuild.gcc.rx.toolchain.debug.494187638" name="GCC for Renesas RX" superClass="com.renesas.cdt.managedbuild.gcc.rx.toolchain.debug">
-							<option id="com.renesas.cdt.managedbuild.gcc.core.option.optimization.optimizationLevel.980032974" name="Optimization Level" superClass="com.renesas.cdt.managedbuild.gcc.core.option.optimization.optimizationLevel" useByScannerDiscovery="true" value="com.renesas.cdt.managedbuild.gcc.core.option.optimization.optimizationLevel.codeSize" valueType="enumerated"/>
+							<option id="com.renesas.cdt.managedbuild.gcc.core.option.optimization.optimizationLevel.980032974" name="Optimization Level" superClass="com.renesas.cdt.managedbuild.gcc.core.option.optimization.optimizationLevel" useByScannerDiscovery="true" value="com.renesas.cdt.managedbuild.gcc.core.option.optimization.optimizationLevel.speedCodeSize" valueType="enumerated"/>
 							<option id="com.renesas.cdt.managedbuild.gcc.core.option.optimization.fdatasections.1295496210" name="Data sections (-fdata-sections)" superClass="com.renesas.cdt.managedbuild.gcc.core.option.optimization.fdatasections" useByScannerDiscovery="true" value="true" valueType="boolean"/>
 							<option id="com.renesas.cdt.managedbuild.gcc.core.option.debug.debugFormat.2073902853" name="Debug format" superClass="com.renesas.cdt.managedbuild.gcc.core.option.debug.debugFormat" useByScannerDiscovery="true" value="com.renesas.cdt.managedbuild.gcc.core.option.debug.debugFormat.Default" valueType="enumerated"/>
 							<option id="com.renesas.cdt.managedbuild.gcc.core.option.cpu.architecture.410641569" name="Architecture" superClass="com.renesas.cdt.managedbuild.gcc.core.option.cpu.architecture" useByScannerDiscovery="false" value="com.renesas.cdt.managedbuild.gcc.rx.architecture.v2" valueType="enumerated"/>
@@ -84,8 +84,6 @@
 									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/freertos_plus/standard/utils/include"/>
 									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/logging/include"/>
 									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../demos/dev_mode_key_provisioning/include"/>
-									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/c_sdk/aws/defender/include"/>
-									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/c_sdk/aws/defender/src"/>
 									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/c_sdk/standard/mqtt/test/access"/>
 									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/c_sdk/standard/mqtt/test/mock"/>
 									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/c_sdk/standard/mqtt/include"/>
@@ -96,8 +94,6 @@
 									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../demos/common/pkcs11_helpers"/>
 									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/abstractions/transport/secure_sockets"/>
 									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/c_sdk/standard/serializer/include"/>
-									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/c_sdk/aws/shadow/include"/>
-									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/c_sdk/aws/shadow/src"/>
 									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/c_sdk/standard/https/test/access"/>
 									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/c_sdk/standard/https/include"/>
 									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/c_sdk/standard/https/src"/>
@@ -105,9 +101,6 @@
 									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/coreHTTP/source/interface"/>
 									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/coreHTTP/source/dependency/3rdparty/http_parser"/>
 									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../demos/common/http_demo_helpers"/>
-									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/freertos_plus/aws/greengrass/test"/>
-									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/freertos_plus/aws/greengrass/include"/>
-									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/freertos_plus/aws/greengrass/src"/>
 									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/freertos_plus/aws/ota/src"/>
 									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/freertos_plus/aws/ota/include"/>
 									<listOptionValue builtIn="false" value="${ProjDirPath}/../../../../../libraries/3rdparty/mbedtls/include"/>
@@ -213,8 +206,6 @@
 									<listOptionValue builtIn="false" value="&quot;.\libraries/freertos_plus/standard/tls/src\iot_tls.o&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;.\libraries/freertos_plus/standard/pkcs11/src\iot_pkcs11.o&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;.\libraries/freertos_plus/standard/crypto/src\iot_crypto.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;.\libraries/freertos_plus/aws/greengrass/src\aws_greengrass_discovery.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;.\libraries/freertos_plus/aws/greengrass/src\aws_helper_secure_connect.o&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;.\libraries/c_sdk/standard/serializer/src/json\iot_serializer_json_decoder.o&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;.\libraries/c_sdk/standard/serializer/src/json\iot_serializer_json_encoder.o&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;.\libraries/c_sdk/standard/serializer/src/cbor\iot_serializer_tinycbor_decoder.o&quot;"/>
@@ -236,12 +227,6 @@
 									<listOptionValue builtIn="false" value="&quot;.\libraries/c_sdk/standard/common\iot_device_metrics.o&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;.\libraries/c_sdk/standard/common\iot_init.o&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;.\libraries/c_sdk/standard/common\iot_static_memory_common.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;.\libraries/c_sdk/aws/shadow/src\aws_iot_shadow_api.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;.\libraries/c_sdk/aws/shadow/src\aws_iot_shadow_operation.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;.\libraries/c_sdk/aws/shadow/src\aws_iot_shadow_parser.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;.\libraries/c_sdk/aws/shadow/src\aws_iot_shadow_static_memory.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;.\libraries/c_sdk/aws/shadow/src\aws_iot_shadow_subscription.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;.\libraries/c_sdk/aws/shadow/src\aws_shadow.o&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;.\libraries/c_sdk/aws/defender/src\aws_iot_defender_api.o&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;.\libraries/c_sdk/aws/defender/src\aws_iot_defender_collector.o&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;.\libraries/c_sdk/aws/defender/src\aws_iot_defender_mqtt.o&quot;"/>
@@ -344,7 +329,6 @@
 									<listOptionValue builtIn="false" value="&quot;.\demos/network_manager\aws_iot_demo_network.o&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;.\demos/network_manager\aws_iot_network_manager.o&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;.\demos/mqtt\iot_demo_mqtt.o&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;.\demos/greengrass_connectivity\aws_greengrass_discovery_demo.o&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;.\demos/dev_mode_key_provisioning/src\aws_dev_mode_key_provisioning.o&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;.\demos/demo_runner\aws_demo.o&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;.\demos/demo_runner\aws_demo_version.o&quot;"/>
