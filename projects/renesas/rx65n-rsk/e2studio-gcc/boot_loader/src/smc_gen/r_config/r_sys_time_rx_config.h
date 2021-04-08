@@ -14,38 +14,24 @@
 * following link:
 * http://www.renesas.com/disclaimer
 *
-* Copyright (C) 2019 Renesas Electronics Corporation. All rights reserved.
+* Copyright (C) 2013-2016 Renesas Electronics Corporation. All rights reserved.
 ***********************************************************************************************************************/
 /***********************************************************************************************************************
-* File Name    : code_signer_public_key.h
-* Description  : Define public key information for code signer.
-***********************************************************************************************************************/
-/**********************************************************************************************************************
+* File Name     : r_sys_time_rx_config.h
+* Description   : Configures the SYSTEM TIME module
+************************************************************************************************************************
 * History : DD.MM.YYYY Version Description
-*         : 11.10.2019 0.01    First Release
+*           30.11.2016 1.00    Initial Release
+***********************************************************************************************************************/
+#ifndef SYS_TIME_CONFIG_H
+#define SYS_TIME_CONFIG_H
+
+#include "platform.h"
+
+/***********************************************************************************************************************
+Configuration Options
 ***********************************************************************************************************************/
 
-#ifndef CODE_SIGNER_PUBLIC_KEY_H_
-#define CODE_SIGNER_PUBLIC_KEY_H_
+/* no configuration is exist for this module */
 
-/*
- * PEM-encoded code signer public key.
- *
- * Must include the PEM header and footer:
- * "-----BEGIN CERTIFICATE-----\n"\
- * "...base64 data...\n"\
- * "-----END CERTIFICATE-----"
- */
-//#define CODE_SIGNENR_PUBLIC_KEY_PEM "Paste code signer public key here."
-#define CODE_SIGNENR_PUBLIC_KEY_PEM \
-"-----BEGIN PUBLIC KEY-----"\
-"MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEWiAlaCQGEgIKoP+qk7Uqc/ME/hjw"\
-"amq1v/z/LWx15CKig59Pd3+ar2RFOlMMOhIfkYgS+Ha7tH+w0ggnKDrUug=="\
-"-----END PUBLIC KEY-----"\
-
-
-
-extern const uint8_t code_signer_public_key[];
-extern const uint32_t code_signer_public_key_length;
-
-#endif /* CODE_SIGNER_PUBLIC_KEY_H_ */
+#endif /* SYS_TIME_CONFIG_H */

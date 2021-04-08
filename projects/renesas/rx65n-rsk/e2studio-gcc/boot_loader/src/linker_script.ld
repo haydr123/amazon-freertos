@@ -1,6 +1,6 @@
 MEMORY
 {
-	RAM : ORIGIN = 0x8, LENGTH = 262136
+	RAM : ORIGIN = 0x4, LENGTH = 262140
 	RAM2 : ORIGIN = 0x00800000, LENGTH = 393216
     DATAFLASH (!rx) : ORIGIN = 0x100000, LENGTH = 32768 
 	ROM : ORIGIN = 0xFFF00000, LENGTH = 1048576
@@ -8,17 +8,17 @@ MEMORY
 }
 SECTIONS
 {
-	.exvectors 0xFFFBFF80  : AT(0xFFFBFF80)
+	.exvectors 0xFFFFFF80 : AT(0xFFFFFF80)
 	{
 		"_exvectors_start" = .;
 		KEEP(*(.exvectors))
 		"_exvectors_end" = .;
 	} >ROM
-	.fvectors 0xFFFBFFFC  : AT(0xFFFBFFFC)
+	.fvectors 0xFFFFFFFC : AT(0xFFFFFFFC)
 	{
 		KEEP(*(.fvectors))
 	} >ROM
-	.text 0xFFF35000 : AT(0xFFF35000)
+	.text 0xFFFC5000 : AT(0xFFFC5000)
 	{
 		*(.text)
 		*(.text.*)
@@ -28,7 +28,7 @@ SECTIONS
 	.rvectors ALIGN(4) :
 	{
 		_rvectors_start = .;
-		INCLUDE ../../../../../../vendors/renesas/rx_driver_package/v125/r_bsp/mcu/all/linker_script_rvectors.inc
+		INCLUDE ../src/smc_gen/r_bsp/mcu/all/linker_script_rvectors.inc
 		_rvectors_end = .;
 	} >ROM
 	.init :
@@ -55,7 +55,7 @@ SECTIONS
 		*(.got)
 		*(.got.plt)
 	} >ROM
-	.rodata 0xFFF00300 : AT(0xFFF00300)
+	.rodata 0xFFFC0000 : AT(0xFFFC0000)
 	{
 		*(.rodata)
 		*(.rodata.*)
@@ -91,9 +91,15 @@ SECTIONS
 		__DTOR_END__ = .;
 		. = ALIGN(2);
 		_mdata = .;
+		. += _edata - _data;
 	} >ROM
 	
-	
+	.pfram2 :
+	{
+	_PFRAM2_start = .;
+	. += _RPFRAM2_end - _RPFRAM2_start;
+	_PFRAM2_end = .;
+	} > ROM
 	.data : AT(_mdata)
 	{
 		_data = .;
@@ -110,24 +116,13 @@ SECTIONS
 		_edata = .;
 	} >RAM
 	
-	B_ETHERNET_BUFFERS_1  (NOLOAD) :
-{
-	_B_ETHERNET_BUFFERS_1_start = .;
-	*(B_ETHERNET_BUFFERS_1)
-	_B_ETHERNET_BUFFERS_1_end = .;
-	} >RAM2
-	B_RX_DESC_1 (NOLOAD) :
+	.rpfram2 ALIGN(4): AT(_PFRAM2_start)
 	{
-	_B_RX_DESC_1_start = .;
-	*(B_RX_DESC_1)
-	_B_RX_DESC_1_end = .;
-	} >RAM2
-	B_TX_DESC_1 (NOLOAD) :
-	{
-	_B_TX_DESC_1_start = .;
-	*(B_TX_DESC_1)
-	_B_TX_DESC_1_end = .;
-	} >RAM2
+	_RPFRAM2_start = .;
+	*(PFRAM2)
+	. = ALIGN(4);
+	_RPFRAM2_end = .;
+	} > RAM
 	
 	.gcc_exc :
 	{
@@ -144,27 +139,14 @@ SECTIONS
 		*(B_2)
 		_ebss = .;
 		_end = .;
-	} >RAM2
-	
-	RPFRAM2   (NOLOAD) : 
-{
-	_RPFRAM2_start = .;
-	*(RPFRAM2)
-	_RPFRAM2_end = .;
 	} >RAM
+	
 	
 	PFRAM  (NOLOAD) : 
 {
 	_PFRAM_start = .;
 	*(PFRAM)
 	_PFRAM_end = .;
-	} >ROM
-	
-	PFRAM2  (NOLOAD) : 
-{
-	_PFRAM2_start = .;
-	*(PFRAM2)
-	_PFRAM2_end = .;
 	} >ROM
 	
 	
@@ -174,30 +156,15 @@ SECTIONS
 	_FRAM2_start = .;
 	*(FRAM2)
 	_FRAM2_end = .;
-	} >RAM2
+	} >RAM
 	
-	C_BOOTLOADER_KEY_STORAGE_1 0x00100000 : AT(0x00100000)
+	C_BOOTLOADER_KEY_STORAGE_1 :
 	{
 	} >DATAFLASH C_BOOTLOADER_KEY_STORAGE_MIRROR_1 :
     {
     } >DATAFLASH
-    
 	
-	C_PKCS11_STORAGE_1 0x00100800 : AT(0x00100800)
-	{
-	} >DATAFLASH C_PKCS11_STORAGE_MIRROR_1 :
-    {
-    } >DATAFLASH
-    
-    C_SYSTEM_CONFIG_1 0x00104800 : AT(0x00104800)
-	{
-	} >DATAFLASH C_SYSTEM_CONFIG_MIRROR_1 :
-    {
-    } >DATAFLASH
-	
-	
-	
-	
+
 	.ofs1 0xFE7F5D00 : AT(0xFE7F5D00)
 	{
 		KEEP(*(.ofs1))

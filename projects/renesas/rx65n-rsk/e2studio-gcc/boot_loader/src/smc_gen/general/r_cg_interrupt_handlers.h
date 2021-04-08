@@ -14,19 +14,23 @@
 * following link:
 * http://www.renesas.com/disclaimer
 *
-* Copyright (C) 2018 Renesas Electronics Corporation. All rights reserved.
+* Copyright (C) 2019 Renesas Electronics Corporation. All rights reserved.
 ***********************************************************************************************************************/
 
 /***********************************************************************************************************************
-* File Name    : Pin.h
-* Version      : 1.0.2
+* File Name    : r_cg_interrupt_handlers.h
+* Version      : 1.2.101
 * Device(s)    : R5F565NEDxFC
-* Description  : This file implements SMC pin code generation.
+* Description  : This file declares interrupt handlers.
 * Creation Date: 2021-03-22
 ***********************************************************************************************************************/
 
-#ifndef PIN_H
-#define PIN_H
+#ifndef INTERRUPT_HANDLERS_H
+#define INTERRUPT_HANDLERS_H
+
+/***********************************************************************************************************************
+Includes
+***********************************************************************************************************************/
 
 /***********************************************************************************************************************
 Macro definitions (Register bit)
@@ -43,8 +47,6 @@ Typedef definitions
 /***********************************************************************************************************************
 Global functions
 ***********************************************************************************************************************/
-void R_Pins_Create(void);
 /* Start user code for function. Do not edit comment generated here */
 /* End user code. Do not edit comment generated here */
 #endif
-

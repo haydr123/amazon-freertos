@@ -340,7 +340,7 @@ Configuration Options
 /* USB Clock Divider Select.
    Available divisors = /2, /3, /4, /5
 */
-#define BSP_CFG_UCK_DIV                 (5) /* Generated value. Do not edit this manually */
+#define BSP_CFG_UCK_DIV                 (2) /* Generated value. Do not edit this manually */
 
 /* Configure BCLK output pin (only effective when external bus enabled)
    Values 0=no output, 1 = BCK frequency, 2= BCK/2 frequency
@@ -649,6 +649,7 @@ Configuration Options
          It is possible to dynamically change the IPR.
 */
 #define BSP_CFG_SWINT_IPR_INITIAL_VALUE     (0x1)
+
 /* This macro is used to select which SCI channel used for debug serial terminal.
    RX65N-RSK Default: SCI8 - G1CUSB0(RL78/G1C), bit rate 115200bps
              Option : SCI6 - PMOD1(FTDI)      , bit rate 921600bps
@@ -663,6 +664,5 @@ Configuration Options
    0(low) - 15(high)
  */
 #define MY_BSP_CFG_SERIAL_TERM_SCI_INTERRUPT_PRIORITY   (15)
-
 #endif /* R_BSP_CONFIG_REF_HEADER_FILE */
 

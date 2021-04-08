@@ -14,38 +14,54 @@
 * following link:
 * http://www.renesas.com/disclaimer
 *
-* Copyright (C) 2019 Renesas Electronics Corporation. All rights reserved.
-***********************************************************************************************************************/
-/***********************************************************************************************************************
-* File Name    : code_signer_public_key.h
-* Description  : Define public key information for code signer.
+* Copyright (C) 2016 Renesas Electronics Corporation. All rights reserved.
 ***********************************************************************************************************************/
 /**********************************************************************************************************************
+* File Name    : r_sys_time_rx_private.h
+* Description  : Functions for using SYSTEM TIME on RX devices.
+***********************************************************************************************************************
 * History : DD.MM.YYYY Version Description
-*         : 11.10.2019 0.01    First Release
+*           30.11.2016 1.00    Initial Release.
 ***********************************************************************************************************************/
 
-#ifndef CODE_SIGNER_PUBLIC_KEY_H_
-#define CODE_SIGNER_PUBLIC_KEY_H_
+#ifndef SYS_TIME_PRIVATE_H
+#define SYS_TIME_PRIVATE_H
 
-/*
- * PEM-encoded code signer public key.
- *
- * Must include the PEM header and footer:
- * "-----BEGIN CERTIFICATE-----\n"\
- * "...base64 data...\n"\
- * "-----END CERTIFICATE-----"
- */
-//#define CODE_SIGNENR_PUBLIC_KEY_PEM "Paste code signer public key here."
-#define CODE_SIGNENR_PUBLIC_KEY_PEM \
-"-----BEGIN PUBLIC KEY-----"\
-"MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEWiAlaCQGEgIKoP+qk7Uqc/ME/hjw"\
-"amq1v/z/LWx15CKig59Pd3+ar2RFOlMMOhIfkYgS+Ha7tH+w0ggnKDrUug=="\
-"-----END PUBLIC KEY-----"\
+/*****************************************************************************
+Includes   <System Includes> , "Project Includes"
+******************************************************************************/
+#include "platform.h"
 
+/******************************************************************************
+Macro definitions
+******************************************************************************/
+#define SYS_TIME_SECOND_OF_MIN  (60UL)
+#define SYS_TIME_SECOND_OF_HOUR (60UL*60UL)
+#define SYS_TIME_SECOND_OF_DAY  (60UL*60UL*24UL)
+#define SYS_TIME_SECOND_OF_YEAR (60UL*60UL*24UL*365UL)
+#define SYS_TIME_SECOND_OF_LEAP_YEAR (60UL*60UL*24UL*366UL)
 
+#define SYS_TIME_INTERVAL_LIMIT (600UL)
+#define SYS_TIME_REGISTERED_PROCESS_LIMIT (30UL)
 
-extern const uint8_t code_signer_public_key[];
-extern const uint32_t code_signer_public_key_length;
+typedef struct time_offset_tbl
+{
+    uint8_t time_offset_code[16];
+    int32_t offset;
+} time_offset_tbl_t;
 
-#endif /* CODE_SIGNER_PUBLIC_KEY_H_ */
+typedef struct proccess_list
+{
+    callback_from_sys_time_t function_pointer;
+    uint8_t registered_flag;
+    uint32_t interval;
+    uint32_t interval_initial;
+} process_list_t;
+
+#if defined (_UNIT_TEST)
+#define SYS_TIME_STATIC
+#else
+#define SYS_TIME_STATIC static
+#endif
+
+#endif /* SYS_TIME_PRIVATE_H */
