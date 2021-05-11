@@ -34,6 +34,21 @@
  * "...base64 data...\n"
  * "-----END CERTIFICATE-----\n";
  */
-static const char signingcredentialSIGNING_CERTIFICATE_PEM[] = "Paste code signing certificate here.";
+static const char signingcredentialSIGNING_CERTIFICATE_PEM[] =
+"-----BEGIN CERTIFICATE-----\n"\
+"MIICYDCCAgYCCQDqyS1m4rjviTAKBggqhkjOPQQDAjCBtzELMAkGA1UEBhMCSlAx\n"\
+"DjAMBgNVBAgMBVRva3lvMRAwDgYDVQQHDAdLb2RhaXJhMRwwGgYDVQQKDBNSZW5l\n"\
+"c2FzIEVsZWN0cm9uaWNzMSYwJAYDVQQLDB1Tb2Z0d2FyZSBEZXZlbG9wbWVudCBE\n"\
+"aXZpc2lvbjERMA8GA1UEAwwISXNoaWd1cm8xLTArBgkqhkiG9w0BCQEWHmhpcm9r\n"\
+"aS5pc2hpZ3Vyby5mdkByZW5lc2FzLmNvbTAeFw0xOTExMTYwMTI3NTBaFw0yOTEx\n"\
+"MTMwMTI3NTBaMIG3MQswCQYDVQQGEwJKUDEOMAwGA1UECAwFVG9reW8xEDAOBgNV\n"\
+"BAcMB0tvZGFpcmExHDAaBgNVBAoME1JlbmVzYXMgRWxlY3Ryb25pY3MxJjAkBgNV\n"\
+"BAsMHVNvZnR3YXJlIERldmVsb3BtZW50IERpdmlzaW9uMREwDwYDVQQDDAhJc2hp\n"\
+"Z3VybzEtMCsGCSqGSIb3DQEJARYeaGlyb2tpLmlzaGlndXJvLmZ2QHJlbmVzYXMu\n"\
+"Y29tMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEWiAlaCQGEgIKoP+qk7Uqc/ME\n"\
+"/hjwamq1v/z/LWx15CKig59Pd3+ar2RFOlMMOhIfkYgS+Ha7tH+w0ggnKDrUujAK\n"\
+"BggqhkjOPQQDAgNIADBFAiArP+9pg0eWqaIkC77T8nDHs9r+18KKvntIDoo9FhKW\n"\
+"gQIhAO75WVGyGt58QCGNx3wMcbaDgJ4Xpqj0SWTWdxdz0jh1\n"\
+"-----END CERTIFICATE-----\n";
 
 #endif
