@@ -308,8 +308,7 @@ static void wifi_recv_task(void * pvParameters)
         {
             /* Pause for a short while to ensure the network is not too
              * congested. */
-            //ulTaskNotifyTake(pdFALSE, portMAX_DELAY);
-        	vTaskDelay(1);
+            ulTaskNotifyTake(pdFALSE, portMAX_DELAY);
         }
         else if (SCI_SUCCESS == sci_ercd)
         {
