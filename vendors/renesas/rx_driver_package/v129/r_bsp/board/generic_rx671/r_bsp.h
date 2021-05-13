@@ -75,6 +75,9 @@ INCLUDE APPROPRIATE MCU AND BOARD FILES
 #include    "mcu/all/r_rx_intrinsic_functions.h"
 #include    "mcu/all/r_rtos.h"
 
+#include    "mcu/all/fsp_common_api.h"
+#include    "mcu/all/r_fsp_error.h"
+
 #ifdef __cplusplus
 }
 #endif

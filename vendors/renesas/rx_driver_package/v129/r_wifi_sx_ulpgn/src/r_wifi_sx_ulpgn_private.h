@@ -211,9 +211,6 @@ typedef struct wifi_socket_tag
     uint32_t receive_num;
     uint32_t receive_count;
     uint32_t put_error_count;
-    uint32_t processed_data_size;
-    uint32_t start_processed_data_size;
-    uint32_t end_processed_data_size;
     uint8_t socket_recv_buff[WIFI_CFG_SOCKETS_RECEIVE_BUFFER_SIZE];
     byteq_hdl_t socket_byteq_hdl;
     TickType_t send_starttime;
@@ -246,7 +243,6 @@ typedef struct
     volatile uint8_t     tx_end_flag;
     uint8_t     timeout_overflow_flag;
     uint8_t     byte_timeout_overflow_flag;
-    uint32_t	socket_change_delay_time;
 } st_atcmd_info_t;
 
 typedef struct

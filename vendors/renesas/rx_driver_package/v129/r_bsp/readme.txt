@@ -1,33 +1,6 @@
 r_bsp Package
 =============
 
-Version (This is information published only in alpha version. It will be deleted in MP version.)
--------
-v6.10
-This is the Alpha6 for BSP v6.10.
-
-The following changed from Alpha5.
-- Changed base version from Rev.5.64 to Rev.5.65.
-- Added the following macro definition for the HOCO.
-  - BSP_CFG_HOCO_FLL_ENABLE
-  - BSP_CFG_HOCO_TRIMMING_ENABLE
-  - BSP_CFG_HOCO_TRIMMING_REG_VALUE
-- Remove BSP_CFG_CLKOUT_OUTPUT from MDF file because it overlaps with Smart Configurator.(RX66N, RX671, RX72M, RX72N)
-
-Notes
--------
-1. By default none of the CAN1 interrupts are mapped in the Interrupt B Sources.
-   CAN module developers should be careful not to get build errors by default.
-2. By default none of the RSCI interrupts are mapped in the Interrupt A Sources.
-   RSCI module developers should be careful not to get build errors by default.
-3. The included iodefine.h of ICCRX is not the official version.
-4. Clock setting of this BSP is new specification.
-   The clock setting of BSP sets each clock according to the five macros.
-   BSP_CFG_MAIN_CLOCK_OSCILLATE_ENABLE, BSP_CFG_SUB_CLOCK_OSCILLATE_ENABLE, BSP_CFG_HOCO_OSCILLATE_ENABLE, BSP_CFG_LOCO_OSCILLATE_ENABLE, BSP_CFG_IWDT_CLOCK_OSCILLATE_ENABLE
-   (If the value is "1", the clock will oscillate, and if the value is "0", the clock will stop.) 
-   When used in combination with the Smart Configurator that does not support this macro, the macro definition value is not updated by the Smart Configurator.
-   Please manually change the macro definition of each of the above clocks corresponding to the clock to be used to "1".
-
 Overview
 --------
 The r_bsp package provides a foundation for code to be built on top of. It provides startup code, iodefines, and MCU
