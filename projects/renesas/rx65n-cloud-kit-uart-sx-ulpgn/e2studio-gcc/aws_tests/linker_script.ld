@@ -114,6 +114,8 @@ SECTIONS
 	.gcc_exc :
 	{
 		*(.gcc_exc)
+		*t.o(.bss.**)
+		*l.o(.bss.**)
 	} >RAM
 	.bss :
 	{

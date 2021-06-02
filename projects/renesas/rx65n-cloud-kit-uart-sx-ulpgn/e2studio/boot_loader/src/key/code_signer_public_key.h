@@ -38,8 +38,8 @@
  */
 #define CODE_SIGNENR_PUBLIC_KEY_PEM  \
 "-----BEGIN PUBLIC KEY-----"\
-"MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEWiAlaCQGEgIKoP+qk7Uqc/ME/hjw"\
-"amq1v/z/LWx15CKig59Pd3+ar2RFOlMMOhIfkYgS+Ha7tH+w0ggnKDrUug=="\
+"MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEHHOpv3uoyZngVylYoPxsUGVCIdL4"\
+"xC8tx5JTDRDtQTGGe9/KZdxhH7i+uDNrQnb9Mxsdwk71g+p0mTKN4OKGCA=="\
 "-----END PUBLIC KEY-----"\
 
 extern const uint8_t code_signer_public_key[];
