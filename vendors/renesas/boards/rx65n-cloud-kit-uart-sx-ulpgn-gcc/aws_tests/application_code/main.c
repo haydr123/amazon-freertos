@@ -58,7 +58,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #define _NM_WIFI_CONNECTION_RETRY_INTERVAL_MS    ( 1000 )
 
-#define _NM_WIFI_CONNECTION_RETRIES              ( 5 )
+#define _NM_WIFI_CONNECTION_RETRIES              ( 20 )
 // RX65N Cloud Kit 20200923 <<--
 
 /* The MAC address array is not declared const as the MAC address will
@@ -272,6 +272,7 @@ static bool _wifiEnable( void )
     if( WIFI_On() != eWiFiSuccess )
     {
         ret = false;
+        configPRINTF(( "WiFi network cannot be enabled.\n" ));
     }
 
     #if ( IOT_BLE_ENABLE_WIFI_PROVISIONING == 0 )
