@@ -45,6 +45,8 @@
 #include "../r_sci_rx/src/targets/rx72n/r_sci_rx72n_private.h"
 #elif defined(BSP_MCU_RX65N)
 #include "../r_sci_rx/src/targets/rx65n/r_sci_rx65n_private.h"
+#elif defined(BSP_MCU_RX671)
+#include "../r_sci_rx/src/targets/rx671/r_sci_rx671_private.h"
 #else
 #error "Include the appropriate file for your MCU."
 #endif
