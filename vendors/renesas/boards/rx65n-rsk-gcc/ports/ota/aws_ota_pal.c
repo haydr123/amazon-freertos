@@ -1,6 +1,6 @@
 /*
  * Amazon FreeRTOS OTA PAL V1.0.0
- * Copyright (C) 2020 Amazon.com, Inc. or its affiliates.  All Rights Reserved.
+ * Copyright (C) 2018 Amazon.com, Inc. or its affiliates.  All Rights Reserved.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy of
  * this software and associated documentation files (the "Software"), to deal in
@@ -39,7 +39,6 @@
 /* Renesas RX Driver Package include */
 #include "platform.h"
 #include "r_flash_rx_if.h"
-#include "r_cg_macrodriver.h"
 
 /* Specify the OTA signature algorithm we support on this platform. */
 const char cOTA_JSON_FileSignatureKey[ OTA_FILE_SIG_KEY_STR_MAX_LENGTH ] = "sig-sha256-ecdsa";   /* FIX ME. */
@@ -504,7 +503,7 @@ static OTA_Err_t prvPAL_CheckFileSignature( OTA_FileContext_t * const C )
 			flash_err = R_FLASH_Write((uint32_t)assembled_flash_buffer, (uint32_t)flash_aligned_address, FLASH_CF_MIN_PGM_SIZE);
 			if(flash_err != FLASH_SUCCESS)
 			{
-				nop();
+				R_BSP_NOP();
 			}
 			while (OTA_FLASHING_IN_PROGRESS == gs_header_flashing_task);
 			xSemaphoreGive(xSemaphoreFlashig);
@@ -612,14 +611,26 @@ OTA_Err_t prvPAL_ResetDevice( void )
     OTA_LOG_L1( "[%s] Resetting the device.\r\n", OTA_METHOD_NAME );
     vTaskDelay(500);
 
-	/* If the status is rejected, aborted, or error, swap bank and return to the previous image.
-	   Then the boot loader will start and erase the image that failed to update. */
-	set_psw(0);
-	R_BSP_InterruptsDisable();
-	R_FLASH_Control(FLASH_CMD_BANK_TOGGLE, NULL);
-	R_BSP_RegisterProtectDisable(BSP_REG_PROTECT_LPC_CGC_SWR);
-	SYSTEM.SWRR = 0xa501;
-	while(1);   /* software reset */
+
+		/* If the status is rejected, aborted, or error, swap bank and return to the previous image.
+		   Then the boot loader will start and erase the image that failed to update. */
+    WDT.WDTCR.BIT.TOPS = 0;
+	WDT.WDTCR.BIT.CKS  = 1;
+	WDT.WDTCR.BIT.RPES = 3;
+	WDT.WDTCR.BIT.RPSS = 3;
+	//WDT Status Register
+	WDT.WDTSR.BIT.CNTVAL = 0;
+	WDT.WDTSR.BIT.REFEF  = 0;
+	WDT.WDTSR.BIT.UNDFF  = 0;
+	//WDT Reset Control Register
+	WDT.WDTRCR.BIT.RSTIRQS = 1;
+	//Non-Maskable Interrupt Enable Register (NMIER)
+	ICU.NMIER.BIT.WDTEN    = 0;
+
+	WDT.WDTRR = 0;
+	WDT.WDTRR = 0xff;
+
+	while (1); // Wait for Watchdog to kick in
 
 
     /* We shouldn't actually get here if the board supports the auto reset.
@@ -961,7 +972,7 @@ static int32_t ota_context_update_user_firmware_header( OTA_FileContext_t * C )
 		flash_err = R_FLASH_Write((uint32_t)block, (uint32_t)BOOT_LOADER_UPDATE_TEMPORARY_AREA_LOW_ADDRESS, length);
 		if(flash_err != FLASH_SUCCESS)
 		{
-			nop();
+			R_BSP_NOP();
 		}
 		while (OTA_FLASHING_IN_PROGRESS == gs_header_flashing_task);
 	}
@@ -1212,11 +1223,11 @@ static void ota_flashing_task( void * pvParameters )
 		flash_err = R_FLASH_Write((uint32_t)block, ulOffset + BOOT_LOADER_UPDATE_TEMPORARY_AREA_LOW_ADDRESS + BOOT_LOADER_USER_FIRMWARE_HEADER_LENGTH, length);
 		if(packet_block_for_queue2.length != 1024)
 		{
-			nop();
+			R_BSP_NOP();
 		}
 		if(flash_err != FLASH_SUCCESS)
 		{
-			nop();
+			R_BSP_NOP();
 		}
 		load_firmware_control_block.total_image_length += length;
 		vPortFree(packet_block_for_queue2.p_packet);
@@ -1231,7 +1242,7 @@ static void ota_flashing_callback(void *event)
 
     if((event_code != FLASH_INT_EVENT_WRITE_COMPLETE) || (event_code == FLASH_INT_EVENT_ERASE_COMPLETE))
     {
-    	nop(); /* trap */
+    	R_BSP_NOP(); /* trap */
     }
 	static portBASE_TYPE xHigherPriorityTaskWoken;
 	xSemaphoreGiveFromISR(xSemaphoreFlashig, &xHigherPriorityTaskWoken);
@@ -1246,7 +1257,7 @@ static void ota_header_flashing_callback(void *event)
 
     if((event_code != FLASH_INT_EVENT_WRITE_COMPLETE) || (event_code == FLASH_INT_EVENT_ERASE_COMPLETE))
     {
-    	nop(); /* trap */
+    	R_BSP_NOP(); /* trap */
     }
 }
 
