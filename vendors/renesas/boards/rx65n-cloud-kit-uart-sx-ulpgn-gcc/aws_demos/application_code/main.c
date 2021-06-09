@@ -64,12 +64,14 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #define _NM_WIFI_CONNECTION_RETRY_INTERVAL_MS    ( 1000 )
 
-#define _NM_WIFI_CONNECTION_RETRIES              ( 5 )
+#define _NM_WIFI_CONNECTION_RETRIES              ( 10 )
 // RX65N Cloud Kit 20200923 <<--
 
 #define mainLOGGING_TASK_STACK_SIZE         ( configMINIMAL_STACK_SIZE * 6 )
 #define mainLOGGING_MESSAGE_QUEUE_LENGTH    ( 15 )
 #define mainTEST_RUNNER_TASK_STACK_SIZE    ( configMINIMAL_STACK_SIZE * 8 )
+
+extern void main_task(void);
 
 /* The MAC address array is not declared const as the MAC address will
 normally be read from an EEPROM and not hard coded (in real deployed
@@ -140,7 +142,7 @@ void main( void )
 {
     while(1)
     {
-    	vTaskDelay(10000);
+    	main_task();
     }
 }
 /*-----------------------------------------------------------*/
